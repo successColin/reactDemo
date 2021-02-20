@@ -1,0 +1,36 @@
+@import '../../../../styles/base.less';
+.wrap {
+  height: 100%;
+}
+.contentWrap {
+  display: flex;
+  height: calc(100% - 42px);
+  .frameType {
+    width: 248px;
+    overflow: auto;
+    border-right: @borderStyle;
+    .select {
+      width: 100%;
+      padding: 8px 12px 0 12px;
+    }
+    .img {
+      margin-left: 2px;
+    }
+  }
+  .content {
+    flex: 1;
+    margin-left: 0;
+    padding: 0 20px;
+    overflow: auto;
+  }
+  .form {
+    width: 100%;
+  }
+}
+.footer {
+  width: 100%;
+  line-height: 41px;
+  border-top: 1px solid #EBEBEB;
+  text-align: right;
+  padding-right: 33px;
+}

@@ -1,0 +1,213 @@
+@import '../../styles/base.less';
+
+.wrap {
+  position: relative;
+  padding: 0;
+  color: #fff;
+  height: @headerHeight;
+  line-height: @headerHeight;
+  z-index: 999;
+  &.showMenuCenter {
+    z-index: 999;
+  }
+  // display: flex;
+  // flex-direction: row;
+  .item {
+    // display: inline-block;
+  }
+}
+.contentWrap {
+  // z-index: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.content {
+  z-index: 1;
+}
+.triggerWrap {
+  width: @sidebarWidth;
+  // line-height: @headerHeight;
+  text-align: center
+}
+.trigger {
+  font-size: 16px;
+  padding: 20px;
+  &:hover {
+    cursor: pointer;
+    color: #f9cece;
+  }
+}
+.logo {
+  // line-height: @headerHeight;
+  height: 24px;
+  // margin-left: 88px;
+  margin-left: 32px;
+}
+.thirdLinkWrap,
+.versionWrap,
+.fullScreenWrap,
+.lang {
+  display: inline-block;
+  line-height: calc(@headerHeight - 16px);
+  height: calc(@headerHeight - 16px);
+}
+.lang{
+  padding: 0px 13px;
+}
+.thirdLinkWrap,
+.versionWrap,
+.fullScreenWrap{
+  margin: 8px 0;
+}
+.iconWrap{
+  line-height: calc(@headerHeight - 16px);
+  height: calc(@headerHeight - 16px);
+  border-radius: 6px;
+  transition: all .5s;
+  margin: 7px  5px;
+  display: flex;
+  align-items: center;
+  &:hover{
+    background: rgba(255, 255, 255, 0.1);
+  }
+  a{
+    color: #ffffff;
+  }
+}
+.entryWrap {
+  // float: right;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  :global{
+    .iconfont{
+      font-size: 22px;
+    }
+  }
+  .inputGroup {
+    display: inline-block;
+    width: auto;
+  }
+  span {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .entry {
+    padding: 0 13px;
+    border-radius: 6px;
+    transition: all .5s;
+    margin: 0 9px;
+    a {
+      color: #fff;
+    }
+    &:hover{
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+  .line {
+    font-size: 12px;
+    margin: 0 10px;
+    opacity: .3;
+  }
+  .avatar {
+    width: auto;
+    height: 34px;
+    text-align: center;
+    border-radius: 17px;
+    // background: #fff;
+    margin: 0 20px 0 5px;
+    overflow: hidden;
+    display: flex;
+    padding: 4px;
+    align-items: center;
+    transition: all .5s;
+    img {
+      width: 26px;
+      display: block;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .userName{
+      display: inline-block;
+      margin-right: 10px;
+      height: 26px;
+      line-height: 26px;
+    }
+  }
+  :global {
+    .ant-input-group.ant-input-group-compact > .ant-select .ant-select-selection,
+    .ant-input-group > .ant-input-affix-wrapper:not(:first-child) .ant-input {
+      background: rgba(255,255,255, .2);
+      border: none;
+      color: #fff;
+      .anticon {
+        color: #fff;
+      }
+    }
+    .ant-input-group.ant-input-group-compact > .ant-select .ant-select-selection {
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+    }
+    .ant-input-group {
+      .ant-input-affix-wrapper .ant-input-suffix .ant-input-search-icon {
+        color: #fff;
+      }
+      > .ant-input-affix-wrapper:not(:first-child) .ant-input {
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+      }
+      ::-webkit-input-placeholder {
+        color: #fff;
+      }
+      :-moz-placeholder {
+        color: #fff;
+      }
+      ::-moz-placeholder {
+        color: #fff;
+      }
+      :-ms-input-placeholder {
+        color: #fff;
+      }
+    }
+
+    .ant-badge-count {
+      font-size: 12px;
+      width: 12px;
+      height: 12px;
+      line-height: 12px;
+      padding: 0;
+      left: 30px;
+      min-width: inherit;
+      background: #fff;
+      transform: scale(.8);
+      top: -5px;
+    }
+    .iconfont {
+      margin: 0 7px;
+      display: inline-block;
+      line-height: 1;
+    }
+    .icon-notice {
+      font-size: 18px;
+    }
+    .icon-download-app,
+    .icon-fullScreen,
+    .icon-exitFullScreen,
+    .icon-help {
+      font-size: 20px;
+      line-height: calc(@headerHeight - 16px);
+    }
+  }
+  .versionWrap{
+    margin: 8px 9px;
+    .entry{
+      margin: 0;
+    }
+  }
+}
+:global {
+  .ant-popover-inner-content{
+    padding: 0;
+  }
+}

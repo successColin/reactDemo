@@ -1,0 +1,44 @@
+.videoContentWrap {
+  width: calc(100% - 8px);
+  height: calc(100%);
+  position: relative;
+  top: 0;
+  left: 4px;
+  background: #FFFFFF;
+
+  :global {
+    .ant-card-head {
+      padding: 0;
+      border-bottom: none;
+
+      .ant-tabs-bar {
+        margin: 0;
+      }
+    }
+
+    .ant-card-bordered {
+      border: none;
+      height: 100%;
+    }
+
+    .ant-card-body {
+      padding: 0;
+      height: calc(100% - 48px);
+      overflow: hidden;
+    }
+
+    .ant-tabs .ant-tabs-large-bar .ant-tabs-tab {
+      padding: 0 28px;
+      height: 42px;
+      font-size: 14px;
+      line-height: 42px;
+    }
+
+    //.ant-tabs-top-bar .ant-tabs-tab-active{
+    //  border-radius: 0 !important;
+    //  text-align: center;
+    //  color: #2077D0 !important;
+    //  border-bottom: 3px solid #2077D0 !important;
+    //}
+  }
+}

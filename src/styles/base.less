@@ -1,0 +1,103 @@
+/** 颜色类 **/
+// 主tab颜色
+@mainTabContentColor: #9B9B9B;
+@defaultcolor: #C62127; // 主字体颜色
+@baseColor: #808080;
+// 容器背景色
+@containerBg: #fff;
+// 树文件夹字体色
+@groupTitColor: #111;
+// 选中树节点背景色
+@treeNodeSelectedBg: #F5F5F5;
+// 普通按钮背景色
+@btnDefaultBg: #D9D9D9;
+// 普通按钮hover背景色
+@btnHoverBg: #BEBEBE;
+@moadlFooterBg: #fff;
+
+
+/** 字体大小 **/
+// 图标
+@iconfontSize: 20px;
+// 树节点
+@treeNodeFontSize: 12px;
+
+
+/** 长宽高 **/
+@minScreenWidth: 1080px;
+// 主体块间边距
+@cubeMargin: 4px;
+// 头部高度
+@headerHeight: 50px;
+// sidebar关闭宽度
+@sidebarWidth: 60px;
+// sidebar hover宽度
+@sidebarHoverWidth: 200px;
+// sidebar展开宽度
+@sidebarOpenWidth: 260px;
+// 二级菜单宽度
+@subMenuWidth: 180px;
+// 左侧菜单中用户信息高度
+@sidebarUserHeight: 114px;
+// 右侧内容块默认边距
+@contentContainerPaddingTop: 8px;
+// 右侧内容块头部筛选、表单等固定高度
+@contentHeaderHeight: 40px;
+
+// 主tab容器高度
+@mainTabContentHeight: 40px;
+// 单个tab高度
+@mainTabHeight: 28px;
+// 内容块左边模块宽度
+@contentLeftWidth: 86px;
+// 左边模块头部搜索框高度
+@treeSearchHeight: 40px;
+// 表单元素高度
+@widgetHeight: 32px;
+
+
+// 左右布局时左侧部分宽度
+@frameLeftWidth: 236px;
+
+// 底部栏高度
+@footerHeight: 42px;
+
+// 按钮高度
+@btnHeight: 30px;
+
+
+/** 其他样式 **/
+// 边样式
+@borderStyle: 1px solid #EBEBEB;
+// 阴影
+@boxShadow: 0px 4px 10px 0px rgba(206, 213, 220, 0.2);
+
+
+@keyframes ripple-in{
+    from {
+        transform: scale(0);
+        background: rgba(255,255,255,.5);
+    }
+    to {
+        transform: scale(1);
+        background: transparent;
+    }
+  }
+@keyframes ripple-out{
+    from {
+        transform: scale(0);
+        background: rgba(255,255,255,.5);
+    }
+    to {
+        transform: scale(1);
+        background: transparent;
+    }
+}
+@keyframes slideMove{
+    from {
+        transform: scale(0,1);
+    }
+    to {
+        transform: scale(1,1);
+    }
+}

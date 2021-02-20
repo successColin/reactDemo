@@ -1,0 +1,246 @@
+@import '../../../styles/base.less';
+
+@treeNodeMargin: 24px;
+@treeNodeHeight: 32px;
+
+// 根据层级结构递增margin
+.level-loop(@n, @i:1) when (@i <= @n) {
+  .level-@{i} {
+    :global {
+      .ant-tree-switcher {
+        margin-left: @treeNodeMargin + @treeNodeMargin * @i / 2;
+      }
+      .ant-tree-node-content-wrapper {
+        width: calc(100% - @iconfontSize - (@treeNodeMargin + @treeNodeMargin * @i / 2))!important;
+      }
+    }
+  }
+  .level-loop(@n, (@i + 1));
+}
+
+.wrap {
+  height: 100%;
+  overflow: auto;
+  :global {
+    .ant-spin-nested-loading {
+      height: 100%;
+    }
+  }
+}
+.treeWrap {
+  font-size: @treeNodeFontSize;
+  width: max-content;
+  min-width: 100%;
+  .level-loop(20);
+  li {
+    position: relative;
+    padding: 0;
+    line-height: @treeNodeHeight;
+  }
+  &.style-dark {
+    color: #fff;
+    :global {
+      .ant-tree-title {
+        color: #fff;
+      }
+      li.custom-tree-active > .ant-tree-node-content-wrapper:after,
+      li .ant-tree-node-content-wrapper:hover:after {
+        background: rgba(0,0,0,.3);
+        transition: background .2s;
+      }
+    }
+  }
+  // 不需要图标时(需要显示选择框时）
+  .noIcon {
+    :global {
+      .ant-tree-iconEle {
+        width: 0px;
+      }
+      .ant-tree-checkbox {
+        z-index: 1;
+      }
+    }
+  }
+  :global {
+    .iconfont {
+      font-size: @iconfontSize;
+      &.icon-more {
+        float: right;
+        margin-right: 6px;
+      }
+    }
+    li ul {
+      padding-left: 0;
+    }
+    .ant-tree-child-tree > li:first-child {
+      padding: 0;
+    }
+    .ant-tree-switcher,
+    .ant-tree-iconEle,
+    .ant-tree-title {
+      position: relative;
+      z-index: 1;
+    }
+    .ant-tree-title {
+      display: inline-block;
+      position: relative;
+      width: calc(100% - @iconfontSize);
+      .icon-more {
+        // display: none;
+        position: absolute;
+        right: 0;
+        top: 0
+      }
+
+      .errorCodeIcon {
+        width: @iconfontSize;
+        margin-right: @cubeMargin;
+        height: @iconfontSize;
+        line-height: @iconfontSize;
+        border-radius: 50%;
+        border: 1px solid #C62127;
+        color: #C62127;
+        display: inline-block;
+        text-align: center;
+      }
+    }
+    li span.ant-tree-iconEle {
+      width: @iconfontSize;
+      margin-right: @cubeMargin;
+      height: @treeNodeHeight;
+      line-height: @treeNodeHeight;
+    }
+    li span.ant-tree-switcher {
+      width: @iconfontSize;
+      margin-left: 24px;
+    }
+    li.custom-tree-active > .ant-tree-node-content-wrapper {
+      &:after {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        background: @treeNodeSelectedBg;
+        height: @treeNodeHeight;
+        left: 0;
+        right: 0;
+        border: none;
+        // border-left: 3px solid ;
+        transition: all .2s;
+      }
+      .iconfont.icon-left {
+        transform: rotate(180deg) scale(0.8);
+        transition: transform .2s;
+      }
+    }
+    // li .ant-tree-node-content-wrapper.ant-tree-node-selected {
+    //   background-color: unset;
+    // }
+    li .ant-tree-node-content-wrapper {
+      padding-left: 0;
+      transition: all .2s;
+      background-color: unset;
+      .ant-tree-title .icon-more {
+        display: none;
+      }
+      &:hover {
+        background: unset;
+        .ant-tree-title .icon-more {
+          // display: none;
+        }
+        // &:after {
+        //   content: '';
+        //   position: absolute;
+        //   z-index: 0;
+        //   background: @treeNodeSelectedBg;
+        //   height: @treeNodeHeight;
+        //   left: 0;
+        //   right: 0;
+        // }
+      }
+      &.ant-tree-node-selected {
+        background: none;
+        // .ant-tree-title .icon-more {
+        //   display: block;
+        // }
+        // &:after {
+        //   content: '';
+        //   position: absolute;
+        //   z-index: 0;
+        //   background: @treeNodeSelectedBg;
+        //   height: @treeNodeHeight;
+        //   left: 0;
+        //   right: 0;
+        //   border-left: 3px solid;
+        //   transition: all .2s;
+        // }
+      }
+    }
+    li span.ant-tree-switcher,
+    li span.ant-tree-node-content-wrapper,
+    li span.ant-tree-iconEle,
+    .ant-tree-title {
+      line-height: @treeNodeHeight;
+      height: @treeNodeHeight;
+    }
+    li.custom-tree-active>.ant-tree-node-content-wrapper .ant-tree-title{
+      color: @defaultcolor;
+    }
+  }
+  .groupTit {
+    :global {
+      .ant-tree-node-content-wrapper {
+        color: @groupTitColor;
+      }
+    }
+  }
+  .eleTit {
+    &.line {
+      :global {
+        .ant-tree-iconEle {
+          transform: scale(0.7)
+        }
+      }
+    }
+    :global {
+      .ant-tree-node-content-wrapper {
+        color: @baseColor;
+        width: 100%;
+      }
+    }
+  }
+  .elementIcon {
+    color: #d9d9d9;
+  }
+  // 节点右侧图标
+  .rightIcon {
+    position: absolute;
+    right: 12px;
+    font-size: 12px;
+    color: #9B9B9B;
+    transform: scale(0.8);
+    transition: transform .2s;
+  }
+}
+// 右键
+.rightMenu {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  z-index: 1;
+  :global {
+    .ant-menu .ant-menu-item {
+      line-height: 32px;
+      height: 32px;
+      margin: 0;
+      padding: 0;
+      &:hover,
+      &.ant-menu-item-selected {
+        background: #EBEBEB;
+        color: inherit;
+      }
+      > span {
+        display: block;
+        padding: 0 16px;
+      }
+    }
+  }
+}

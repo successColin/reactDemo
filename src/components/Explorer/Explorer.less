@@ -1,0 +1,143 @@
+
+.base {
+  color: rgba(231, 97, 102, 1);
+  cursor: pointer;
+}
+
+.word {
+  color: rgba(247, 181, 0, 1);
+  cursor: pointer;
+}
+
+.falult {
+  color: rgba(239, 222, 35, 1);
+  cursor: pointer;
+}
+
+.plan {
+  color: rgba(138, 159, 221, 1);
+  cursor: pointer;
+}
+
+.preject {
+  color: rgba(169, 137, 203, 1);
+  cursor: pointer;
+}
+
+.history {
+  color: rgba(234, 159, 202, 1);
+}
+
+.inspection {
+  color: rgba(226, 163, 122, 1);
+  cursor: pointer;
+}
+
+.spare {
+  color: rgba(105, 187, 156, 1);
+  cursor: pointer;
+}
+
+.bgColor {
+  background: #fff;
+}
+
+.contentBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.leftSilder {
+  width: 236px;
+  float: left;
+  background: #fff;
+}
+
+.search {
+  width: 226px;
+}
+
+.searchBox {
+  padding: 4px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.treeBox {
+  height: calc(100% - 40px);
+}
+
+.tableBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-left: 5px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #fff;
+}
+
+.tableStyle {
+  height: calc(100% - 80px);
+}
+
+.tableNomal {
+  height: calc(100% - 25px);
+}
+
+.footer_expend {
+  height: 65px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #ECECEC;
+  transition: height 0.2s;
+}
+
+.footer_zoom {
+  height: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #ECECEC;
+  transition: height 0.2s;
+}
+
+.footerContent {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  line-height: 65px;
+  overflow: hidden;
+
+  & > div {
+    flex: 1;
+
+    :global {
+      .iconfont {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.iconHook {
+  position: absolute;
+  top: -19px;
+  left: 50%;
+  height: 5px;
+  margin-left: -70.2px;
+  color: #ECECEC;
+  cursor: pointer;
+}
+
+.iconHide {
+  height: 5px;
+  margin-top: -6px;
+  background: #fff;
+}
+

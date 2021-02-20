@@ -1,0 +1,112 @@
+@import '../../../../../styles/base.less';
+
+.wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .queryLine {
+    float: right;
+    padding-right: 16px;
+    text-align: right;
+  }
+  .headerWrap {
+    &:after {
+      content: '';
+      clear: both;
+    }
+    &.hasSearchQuery {
+      :global {
+        .tree-frame-button-line {
+          float: left;
+        }
+      }
+    }
+  }
+}
+.columsSpan {
+  margin-right: 5px;
+  cursor: pointer;
+}
+.stateClass {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.table {
+  // height: calc(100% - 42px);
+  height: inherit;
+  flex: 1 1;
+  margin-top: auto;
+  padding-top: 8px;
+  overflow: auto;
+  // &.hasSearchQuery {
+  //   height: calc(100% - 82px);
+  // }
+  &.searchSelectList {
+    :global {
+      .ant-table-selection-column > span {
+        line-height: 32px;
+      }
+    }
+  }
+  :global {
+    .ant-table {
+      height: calc(100% - 50px);
+    }
+    .ant-pagination {
+      margin: 8px 12px!important;
+    }
+    .ant-spin-container {
+      display: flex;
+      flex-direction: column;
+      .ant-table {
+        height: auto;
+        flex: 1;
+        margin-bottom: 0;
+        overflow: auto;
+      }
+      .ant-pagination {
+        text-align: right;
+        .ant-pagination-options {
+          text-align: left;
+        }
+      }
+    }
+  }
+  &.popup {
+    height: 100%;
+    :global {
+      .ant-pagination {
+        position: absolute;
+        bottom: -50px;
+        padding-top: 11px;
+        width: 100%;
+        margin: 16px 0!important;
+        border-top: 1px solid #EBEBEB;
+      }
+    }
+  }
+  &.customList {
+    :global {
+      .ant-pagination {
+        bottom: 4px;
+      }
+    }
+  }
+}
+.selectListBtnWrap {
+  position: absolute;
+  right: 12px;
+  bottom: 4px;
+  .cancelBtn {
+    margin-right: 16px;
+  }
+}
+.imgWrap {
+  width: 86px;
+  height: 86px;
+  display: flex;
+  align-items: center;
+}

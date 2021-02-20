@@ -1,0 +1,27 @@
+.wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.listWrap {
+  // height: calc(100% - 42px);
+  height: 100%;
+  flex: 1;
+}
+.modalContent {
+  height: 100%;
+  padding-top: 8px;
+}
+.popupTable {
+  height: 100%;
+  position: static;
+  :global {
+    .ant-pagination.ant-table-pagination {
+      position: absolute;
+      bottom: 8px;
+    }
+    .ant-table {
+      height: 100%;
+    }
+  }
+}

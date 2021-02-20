@@ -1,0 +1,106 @@
+@import '../../styles/base.less';
+
+.wrap {
+  height: 100%;
+  .tabTit {
+    &:hover {
+      :global {
+        .icon-close {
+          opacity: 1;
+          transition: opacity .2s;
+        }
+      }
+    }
+    :global {
+      .icon-close {
+        position: absolute;
+        right: 3px;
+        width: auto!important;
+        opacity: 0;
+        font-size: 12px;
+        transform: scale(0.8);
+        transition: opacity .2s;
+      }
+    }
+  }
+  :global {
+    .custom-pageConfig-tabs {
+      height: 100%;
+      > .ant-tabs-content {
+        height: calc(100% - 43px);
+        // border-bottom: @borderStyle;
+        > .ant-tabs-tabpane.ant-tabs-tabpane-active {
+          height: 100%;
+        }
+      }
+      > .ant-tabs-bar {
+        > .ant-tabs-nav-container > .ant-tabs-nav-wrap .ant-tabs-nav > div {
+          display: flex;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .modalSearch {
+    position: absolute;
+    right: 47px;
+    top: 7px;
+    width: 38px;
+    &:not(.showInput) {
+      :global {
+        input {
+          border: none;
+        }
+      }
+    }
+    &.showInput {
+      :global {
+        input {
+          width: 200px;
+          position: absolute;
+          right: 0;
+          + .ant-input-suffix {
+            top: 16px;
+          }
+        }
+        .anticon.anticon-close-circle {
+          top: 0px;
+          position: absolute;
+          right: 16px;
+        }
+      }
+    }
+    :global {
+      .ant-input-suffix {
+        top: 16px;
+      }
+      input {
+        width: 200px;
+        position: absolute;
+        right: 0;
+        transition: width .2s;
+        &:focus {
+          width: 200px;
+          position: absolute;
+          right: 0;
+          + .ant-input-suffix {
+            top: 16px;
+          }
+        }
+      }
+    }
+  }
+  .paramsBox{
+    padding-left: 15px;
+    padding-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    height: 21px;
+    line-height: 21px;
+    border-left: 1px solid @btnDefaultBg;
+    cursor: pointer;
+    .iconSty{
+      margin-right: 8px;
+    }
+  }
+}

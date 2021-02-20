@@ -1,0 +1,376 @@
+@import '../../../styles/base.less';
+
+.cInput {
+  line-height: 22px;
+  height: 31px;
+
+  :global {
+    input {
+      &:focus {
+        + .ant-input-suffix .ant-input-clear-icon {
+          display: block;
+        }
+      }
+
+      + .ant-input-suffix {
+        .ant-input-clear-icon {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.cSearch {
+}
+
+.cButton {
+  box-shadow: rgba(0, 0, 0, 0.043);
+
+  &.btn-default {
+    background: #fff;
+    color: #111111;
+
+    &:hover,
+    &:focus {
+      color: #111111;
+      background: none;
+      box-shadow: 0px 0px 17px -8px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &.btn-yellow {
+    background: #FAB71C;
+    border-color: #FAB71C;
+    box-shadow: none;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      border-color: #FAB71C;
+      background: #FAB71C;
+      color: #fff;
+    }
+  }
+}
+
+.cToolContainer {
+  position: absolute;
+  z-index: 1111;
+  width: 240px;
+  height: 100%;
+  right: -245px;
+  top: 0;
+  opacity: 1;
+  transition: opacity 1s;
+
+  &.hide {
+    opacity: 0;
+    display: none;
+    transition: opacity 1s;
+  }
+
+  .arrow::before,
+  .inner {
+    background: rgba(25, 30, 50, 0.7);
+    box-shadow: -3px 3px 7px rgba(0, 0, 0, 0.07);
+  }
+
+  .mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .arrow {
+    position: absolute;
+    left: -13px;
+    top: 10px;
+    display: block;
+    width: 13.07106781px;
+    height: 13.07106781px;
+    background: transparent;
+    overflow: hidden;
+    pointer-events: none;
+
+    &:before {
+      width: 5px;
+      height: 5px;
+      content: '';
+      display: block;
+      margin: auto;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgba(25, 30, 50, 0.7);;
+      position: absolute;
+      pointer-events: auto;
+      transform: translateX(6px) rotate(45deg);
+      box-shadow: -3px 3px 7px rgba(0, 0, 0, 0.07);
+    }
+  }
+
+  .inner {
+    position: relative;
+    z-index: 1112;
+    height: 100%;
+    line-height: initial;
+    color: #fff;
+    text-align: left;
+    text-decoration: none;
+    word-wrap: break-word;
+    background-color: rgba(25, 30, 50, 0.7);;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.cCard {
+
+}
+
+.cUpload {
+  & .fileWrap {
+    width: 100%;
+    height: 40px;
+    margin: 5px 0;
+    padding: 0 5px;
+    line-height: 40px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    border: 1px solid #EBEBEB;
+
+    & > a {
+      display: inline-block;
+      width: calc(100% - 35px);
+      height: 100%;
+    }
+
+    .del {
+      margin-left: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      vertical-align: top;
+    }
+  }
+
+  & .iconWrap {
+    font-size: 24px;
+  }
+
+  & .fileName {
+    width: calc(100% - 10px - 45px);
+    margin-left: 10px;
+    display: inline-block;
+    color: #111111;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    vertical-align: top;
+  }
+
+
+  &.avatar {
+    :global {
+      .ant-upload-list-item {
+        margin: 0;
+        width: 78px;
+        height: 78px;
+        padding: 0;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px dashed #d9d9d9;
+      }
+
+      .anticon.anticon-delete {
+        display: none;
+      }
+    }
+  }
+
+  &.ImgUnRelation {
+    &.isInList {
+      :global {
+        .ant-upload.ant-upload-select.ant-upload-select-picture-card {
+          width: 60px;
+          height: 60px;
+          padding: 0;
+
+          .ant-upload {
+            width: 60px;
+            height: 60px;
+          }
+        }
+
+      }
+    }
+
+    &.hasImg {
+      :global {
+        .ant-upload-list,
+        .ant-upload > div:not(.zmage-del-wrap):not(.zmage-wrap) {
+          display: none;
+        }
+      }
+    }
+
+    :global {
+      .ant-upload.ant-upload-select.ant-upload-select-picture-card {
+        position: relative;
+        padding: 8px;
+        margin: 0;
+
+        &:hover {
+          .zmage-del-wrap {
+            opacity: 1;
+            transition: opacity .2s;
+          }
+        }
+
+        .ant-upload {
+          display: flex;
+          align-items: center;
+          width: 86px;
+          height: 86px;
+          overflow: hidden;
+          padding: 0;
+
+          .anticon.anticon-plus {
+            // margin-top: 28px;
+          }
+
+          > div:not(.zmage-wrap) {
+            width: 100%;
+          }
+        }
+      }
+
+      .anticon-loading {
+        position: absolute;
+        left: calc(50% - 6px);
+        top: calc(50% - 6px);
+      }
+
+      .zmage-del-wrap {
+        opacity: 0;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        // width: 34px;
+        // height: 34px;
+        transition: opacity 0.2s;
+
+        .icon-del {
+          position: absolute;
+          right: 0px;
+          top: 0;
+          padding: 4px 7px;
+          color: #fff;
+          background: rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+  }
+
+  :global {
+    .ant-upload-list-text {
+      .ant-upload-list-item .ant-upload-list-item-info {
+        line-height: 1 !important;
+
+        & .anticon-paper-clip {
+          position: inherit;
+        }
+      }
+    }
+
+    .ant-upload .anticon-loading {
+
+    }
+
+    .ant-upload-list-picture-card {
+      float: left;
+    }
+
+    .ant-upload-list-item-info > span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .ant-upload-list-picture-card .ant-upload-list-item-thumbnail,
+    .ant-upload-list-picture-card .ant-upload-list-item-thumbnail img {
+      height: auto;
+    }
+
+    .ant-upload-list-picture-card .ant-upload-list-item-actions {
+      top: 0;
+      bottom: 0;
+      transform: none;
+      left: 0;
+      right: 0;
+
+      > a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .anticon-eye-o {
+          display: none
+        }
+      }
+
+      > .anticon.anticon-delete {
+        right: 5px;
+        position: absolute;
+        top: 5px;
+        padding: 10px 16px;
+      }
+    }
+  }
+}
+
+.marginRight {
+  margin-right: 5px;
+}
+
+.isDisabled {
+  :global {
+    .ant-upload-select-picture-card {
+      display: none !important;
+    }
+
+    .anticon.anticon-delete {
+      display: none;
+    }
+  }
+}
+
+.alignStyle {
+  height: 32px;
+  line-height: 32px;
+}
+
+.cBraftEditor {
+  span {
+    font-size: inherit;
+  }
+}
+
+.cBraftEditorSection {
+  padding: 0 20px;
+  word-break: break-all;
+  border: 1px solid #d9d9d9;
+  min-height: 30px;
+  border-radius: 4px;
+
+  span {
+    font-size: inherit;
+  }
+}

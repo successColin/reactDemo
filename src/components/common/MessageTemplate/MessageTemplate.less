@@ -1,0 +1,71 @@
+@import '../../../styles/base.less';
+.content {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+
+  .contentBox {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid rgba(235, 235, 235, 1);
+    overflow-y: scroll;
+
+    .title {
+      width: 899px;
+      height: 22px;
+      font-size: 16px;
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 500;
+      color: rgba(17, 17, 17, 1);
+      line-height: 22px;
+    }
+
+    .substance {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: 1px dashed rgba(235, 235, 235, 1);
+    }
+  }
+}
+
+.box {
+  display: flex;
+  height: 32px;
+  line-height: 32px;
+  border-bottom: 1px solid rgba(235, 235, 235, 1);
+
+  .boxLeft {
+   width: 90px;
+    font-size: 12px;
+    padding-left: 5px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: rgba(17, 17, 17, 1);
+  }
+
+  .boxRight {
+    color: rgba(155, 155, 155, 1);
+  }
+}
+
+.attention {
+  margin-top: 30px;
+  color: rgba(155, 155, 155, 1);
+}
+
+.text {
+  margin-top: 10px;
+  min-height: 50px;
+}
+
+.common {
+  padding-left: 5px;
+  height: 32px;
+  line-height: 32px;
+  border-bottom: 1px solid rgba(235, 235, 235, 1);
+}
+
+.red {
+  color: @defaultcolor;
+}

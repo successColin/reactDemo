@@ -1,0 +1,56 @@
+@import '../../../../../styles/base.less';
+
+.table {
+  height: 100%;
+  :global {
+    textarea.ant-input {
+      min-height: 31px!important;
+    }
+    .ant-spin-nested-loading,
+    .ant-spin-container,
+    .ant-table,
+    .ant-table-content,
+    .ant-table-scroll {
+      height: 100%;
+    }
+    .ant-table.ant-table-small {
+      border: none;
+    }
+    .ant-table-body {
+      height: calc(100% - 38px);
+      max-height: inherit!important;
+    }
+    .ant-table-row td,
+    .ant-table-header .ant-table-fixed .ant-table-thead th {
+      // word-break: break-all;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .ant-table table,
+    .ant-table-header .ant-table-fixed table {
+      table-layout: fixed;
+    }
+    .ant-table-body .ant-table-tbody tr:last-child {
+      border-bottom: @borderStyle;
+    }
+    .ant-table > .ant-table-content .ant-table-header {
+      background: #FAFAFA;
+    }
+    .ant-table-content > .ant-table-scroll > .ant-table-body > table > .ant-table-tbody > tr > td.ant-table-selection-column,
+    .ant-table-content > .ant-table-scroll > .ant-table-header > table > .ant-table-thead > tr > th.ant-table-selection-column {
+      padding: 2px 8px!important;
+    }
+    .ant-table-content .ant-table-scroll .ant-table-placeholder {
+      position: absolute;
+      //top: calc(50% - 80px);
+      padding: 0;
+      top: calc(50% - 30px);
+      left: calc(50% - 50px);
+      border: none;
+      .ant-empty {
+        margin: 0;
+      }
+    }
+  }
+}

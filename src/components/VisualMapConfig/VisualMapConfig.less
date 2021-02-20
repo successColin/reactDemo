@@ -1,0 +1,395 @@
+.visualmap {
+  height: 100%;
+  background-color: #f5f5f5;
+  position: relative;
+
+  &.fullScreen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+  }
+
+  :global {
+    .hoverInfo {
+      position: absolute;
+      left: -200px;
+      top: 0px;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 5px;
+      z-index: 20;
+      color: #fff;
+      padding: 10px;
+      min-width: 200px;
+      font-size: 12px;
+      font-weight: 400;
+      opacity: 0;
+
+      .label {
+        display: inline-block;
+        min-width: 65px;
+        text-align: right;
+      }
+    }
+
+    .upBackground {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      img {
+        width: 246px;
+      }
+    }
+
+    .visualmapInner {
+      width: 100%;
+      height: 100%;
+
+      .visualCanvas {
+        width: 100%;
+        height: 100%;
+      }
+
+      .blockConfig {
+        position: absolute;
+        right: 15px;
+        top: 62px;
+        bottom: 70px;
+        z-index: 10;
+        width: 260px;
+        background: #fff;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.08);
+        border-radius: 4px;
+        border: 1px solid rgba(235, 235, 235, 1);
+
+        .sketch-picker-box {
+          position: absolute;
+          left: -230px;
+          top: 0;
+
+          .sketch-picker {
+            padding: 10px 10px 50px !important;
+
+            .flexbox-fix:nth-last-child(1) {
+              border-bottom: 1px solid #e8e8e8;
+            }
+          }
+
+          .ant-btn-primary {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+          }
+        }
+
+        .header {
+          padding: 0 20px;
+
+          h2 {
+            font-size: 16px;
+            font-family: PingFangSC-Medium, PingFang SC;
+            font-weight: 700;
+            color: rgba(17, 17, 17, 1);
+            line-height: 40px;
+            border-bottom: 1px solid #EBEBEB;
+          }
+
+          .right-arrow {
+            margin-right: 10px;
+          }
+        }
+
+        .content {
+          padding: 0 20px;
+          position: absolute;
+          top: 81px;
+          bottom: 65px;
+          left: 0;
+          right: 0;
+          overflow: auto;
+
+          .ant-form-item {
+            flex-wrap: wrap;
+            padding: 0;
+            margin-bottom: 0;
+
+            .ant-form-item-label {
+              width: 100%;
+              justify-content: left;
+              padding: 0;
+            }
+
+            label {
+              font-size: 12px;
+              font-family: PingFangSC-Regular, PingFang SC;
+              font-weight: 400;
+              color: rgba(128, 128, 128, 1);
+              line-height: 30px;
+            }
+          }
+        }
+
+        .footer {
+          text-align: right;
+          padding: 0 20px;
+          border-top: 1px solid #e8e8e8;
+          line-height: 64px;
+          position: absolute;
+          width: 100%;
+          left: 0;
+          bottom: 0;
+
+          button {
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .visualBack {
+        position: absolute;
+        right: 203px;
+        bottom: 15px;
+        z-index: 10;
+        padding-right: 15px;
+        height: 42px;
+        line-height: 39px;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.08);
+        border-radius: 4px;
+        border: 1px solid rgba(235, 235, 235, 1);
+        cursor: pointer;
+
+        .iconfont {
+          // color: #C62127;
+          margin: 0 10px;
+          font-size: 22px;
+        }
+
+        .text {
+          vertical-align: top;
+        }
+      }
+    }
+
+    // 右上角控制器
+    .visualControl {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      z-index: 10;
+      width: 481px;
+      height: 42px;
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.08);
+      border-radius: 4px;
+      border: 1px solid rgba(235, 235, 235, 1);
+      line-height: 39px;
+      padding: 0 5px;
+      box-sizing: border-box;
+
+      .ant-input-affix-wrapper {
+        .ant-input {
+          border-color: #fff;
+
+          &:focus {
+            box-shadow: none;
+          }
+        }
+
+        &:hover .ant-input:not(.ant-input-disabled) {
+          background-color: #F5F5F5;
+          border-color: #F5F5F5;
+        }
+
+        .ant-input-suffix > i.anticon-search:active {
+          color: #C62127;
+        }
+      }
+
+      .line {
+        margin: 0 10px 0 20px;
+        color: #EBEBEB;
+        font-size: 15px;
+      }
+
+      .controlItem {
+        display: inline-block;
+        margin: 0px 9px;
+        cursor: pointer;
+        color: #808080;
+        transition: color 0.75s;
+        font-size: 24px;
+        vertical-align: top;
+        /* &:hover, &.active{
+          color: #C62127;
+        } */
+      }
+
+      .disabled {
+        cursor: no-drop;
+      }
+    }
+
+    // 右下角缩放
+    .visualZoomBox {
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+      z-index: 10;
+      width: 180px;
+      height: 42px;
+      line-height: 39px;
+      box-sizing: border-box;
+      display: flex;
+      .iconfont {
+        font-size: 24px;
+        vertical-align: sub;
+        color: #808080;
+        cursor: pointer;
+        user-select: none;
+        height: 42px;
+        &.disabled {
+          color: #D9D9D9;
+          cursor: no-drop;
+        }
+      }
+      .visualZoom {
+        width: 130px;
+        display: inline-block;
+        padding: 0 10px;
+        background:rgba(255,255,255,1);
+        box-shadow:0px 4px 10px 0px rgba(0,0,0,0.08);
+        border-radius:4px;
+        border:1px solid rgba(235,235,235,1);
+        height: 42px;
+        .ant-input-number {
+          box-shadow: none;
+
+          &:focus {
+            box-shadow: none;
+          }
+
+          .ant-input-number-handler-wrap {
+            display: none;
+          }
+
+          .ant-input-number-input {
+            padding: 0;
+            text-align: center;
+
+            &:hover {
+              background-color: #F5F5F5;
+              border-color: #F5F5F5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 热区弹窗
+.hostPotPopover {
+  padding: 10px 0px;
+
+  li {
+    color: #111111;
+    padding: 5px 10px;
+    cursor: pointer;
+
+    span {
+      color: #9B9B9B;
+      margin-right: 10px;
+    }
+
+    &:hover {
+      background: #F5F5F5;
+    }
+  }
+}
+
+// 图片弹窗
+.imgModal {
+  width: 100%;
+  height: 100%;
+
+  :global {
+    .ant-upload-picture-card-wrapper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      vertical-align: top;
+
+      .ant-upload-list-picture-card {
+        overflow: auto;
+        position: absolute;
+        top: 60px;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+
+        .ant-upload-list-item {
+          .ant-upload-list-item-info {
+            cursor: pointer;
+
+            & > span {
+              margin-top: 50%;
+              transform: translateY(-50%);
+            }
+          }
+
+          &.select {
+            border-color: #C62127;
+          }
+        }
+
+        .ant-upload-list-item-actions {
+          top: 10px;
+          right: 10px;
+          left: auto;
+          transform: none;
+          cursor: pointer;
+        }
+      }
+
+      .ant-upload-select-picture-card {
+        border: none;
+        background: none;
+        border-bottom: 1px solid #e8e8e8;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        height: 40px;
+        text-align: left;
+        border-radius: 0;
+
+        .ant-upload {
+          width: 105px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+.tableListWrap {
+  height: 100%;
+
+  .modalSearch {
+    position: absolute;
+    top: 7px;
+    right: 48px;
+    width: 200px;
+  }
+}

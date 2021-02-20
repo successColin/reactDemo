@@ -1,0 +1,182 @@
+@defaultHeight: 23px;
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  //padding: 7px 19px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  //background: #fff;
+
+  :global {
+    .ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-body > table > .ant-table-tbody > tr > td {
+      padding: 2px 8px;
+    }
+
+    .ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-header > table > .ant-table-thead > tr > th {
+      padding: 2px 8px;
+    }
+
+    .ant-row {
+      //height: 40px;
+    }
+  }
+}
+
+.cellHeight {
+  min-height: 16px;
+  padding-right: 24px;
+}
+
+.cellSelect, .cellInput, .cellNormalSelect {
+  width: 90% !important;
+}
+
+.tableStyle {
+  height: calc(100%);
+
+  :global {
+    .ant-table-pagination.ant-pagination {
+      float: none;
+      margin: 7px 0 0 0;
+      text-align: center;
+    }
+
+    .ant-form-item-control, .ant-select-selection__rendered {
+      line-height: @defaultHeight;
+    }
+
+    .ant-input-number {
+      height: @defaultHeight;
+      line-height: @defaultHeight;
+    }
+
+    .ant-input-number-input, .ant-select-selection--single, .ant-input {
+      height: @defaultHeight;
+    }
+  }
+}
+
+.columsSpan {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.stateClass {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.tableStyleNomal {
+  height: calc(100% - 35px);
+
+
+
+  :global {
+    .ant-table-pagination.ant-pagination {
+      float: none;
+      margin: 7px 0 0 0;
+      text-align: center;
+    }
+
+    .ant-form-item-control, .ant-select-selection__rendered {
+      line-height: @defaultHeight;
+    }
+
+    .ant-input-number {
+      height: @defaultHeight;
+      line-height: @defaultHeight;
+    }
+
+    .ant-input-number-input, .ant-select-selection--single, .ant-input {
+      height: @defaultHeight;
+    }
+  }
+}
+
+.divFlex {
+  float: left;
+  //margin-bottom: 14px;
+  margin-right: 9px;
+}
+
+.addNewBtn {
+  //width: 85px;
+  height: 32px;
+  padding: 0 9px;
+  //margin: 7px 0 0 0px;
+  margin: 5px 0;
+  border: 1px solid #D9D9D9;
+  border-radius: 4px;
+  line-height: 32px;
+  background: #fff;
+  color: #111111;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+
+  .addnewBtnIco {
+    margin-right: 5px;
+    color: #C62127;
+  }
+}
+
+.commonIconStyle {
+  margin-right: 5px;
+  font-size: 14px;
+  color: #C62127;
+  vertical-align: bottom;
+}
+
+.searchBox {
+  width: 280px;
+  //height: 46px;
+  float: right;
+  margin: 5px 0;
+  text-align: right;
+}
+
+.filterBox {
+  min-width: 110px;
+  float: right;
+  margin: 5px 0;
+}
+
+.hide {
+  display: none;
+}
+
+.modalStyle {
+  :global {
+    .ant-modal-body {
+      padding-top: 20px;
+      overflow-y: scroll;
+    }
+  }
+}
+
+.ColHeight {
+  height: 53px;
+}
+
+.paginationSty {
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+  width: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.mainContent {
+  background: #fff;
+  //padding: 7px 19px;
+  height: calc(100% - 46px);
+}

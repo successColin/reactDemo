@@ -1,0 +1,64 @@
+@import '../../../../styles/base.less';
+
+.wrap {
+  position: relative;
+}
+.loadingWrap {
+  :global {
+    .ant-spin-nested-loading, .ant-spin-container {
+      height: auto;
+    }
+  }
+}
+.box {
+  &:after {
+    clear: both;
+    display: block;
+    content: '';
+    padding-bottom: 16px;
+  }
+  .iconLi {
+    margin: 16px 0 0 16px;
+    float: left;
+    border: @borderStyle;
+    line-height: 38px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: border .2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+    }
+    :global {
+      .ant-spin-nested-loading {
+        width: 100%;
+      }
+    }
+    &.large {
+      width: 98px;
+      height: 98px;
+      .icon {
+        font-size: 30px;
+        margin: 5px 0;
+      }
+      :global {
+        .ant-spin-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+    }
+    .icon {
+      font-size: 24px;
+    }
+  }
+}

@@ -1,0 +1,131 @@
+@import '../../../../styles/base.less';
+
+@tabHeight: 48px;
+
+.wrap {
+  height: 100%;
+  .contentWrap {
+    // display: flex;
+    // flex-direction: column;
+    height: 100%;
+    // height: calc(100% - @footerHeight);
+    // &.listWrap {
+    //   height: 100%;
+    //   .content {
+    //     padding: 6px 0 0;
+    //     height: calc(100% - @footerHeight);
+    //   }
+    // }
+    // &.popup {
+    //   .content {
+    //     padding-bottom: 50px;
+    //     height: 100%;
+    //   }
+    // }
+    // &.hasSearchQuery {
+    //   .content {
+    //     height: 100%;
+    //   }
+    // }
+
+    &.formWrap {
+      display: flex;
+      flex-direction: column;
+      padding-top: 16px;
+      :global {
+        .tree-frame-button-line {
+          position: static;
+          width: 100%;
+        }
+      }
+    }
+    :global {
+      .ant-form {
+        height: 100%;
+      }
+    }
+  }
+  .content {
+    // padding: 24px 18px 0 18px;
+    height: 100%;
+    width: 100%;
+    // overflow: auto;
+  }
+  :global {
+    .ant-card {
+      height: 100%;
+      width: 100%;
+    }
+    .ant-card-head {
+      padding: 0;
+      border: none;
+      .ant-tabs {
+        overflow: hidden;
+      }
+    }
+    .ant-card-body {
+      height: calc(100% - @tabHeight);
+      padding: 0;
+      overflow: auto;
+    }
+    .custom-pageConfig-tabs {
+      .ant-tabs-content {
+        height: calc(100% - @mainTabContentHeight - @footerHeight - @cubeMargin);
+      }
+      .ant-tabs-bar .ant-tabs-nav-container .ant-tabs-nav-wrap {
+        .ant-tabs-tab {
+          width: auto;
+          padding: 0 8px;
+          text-align: center;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          &:first-child,
+          &:last-child {
+            color: inherit;
+            width: auto;
+            padding: 0 8px;
+          }
+        }
+      }
+    }
+  }
+}
+// 弹窗内容器
+.modal {
+  .listWrap {
+    height: 100%;
+    .content {
+      padding: 6px 0 0;
+      // height: calc(100% - @footerHeight);
+    }
+  }
+  .formWrap {
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+    .content {
+      height: inherit;
+      width: 98%;
+      margin: 0 auto;
+      overflow: auto;
+    }
+    :global {
+      .tree-frame-button-line {
+        flex: 1;
+        width: 100%;
+        box-shadow: none;
+        border-top: @borderStyle;
+      }
+    }
+  }
+  :global {
+    .tree-frame-button-line {
+      position: relative;
+      z-index: 11111;
+    }
+    .ant-pagination.ant-table-pagination {
+      position: static;
+      text-align: left;
+    }
+  }
+}

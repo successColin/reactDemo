@@ -1,0 +1,94 @@
+.wrap {
+  padding-bottom: 50px;
+
+
+  .selectItem {
+    :global {
+      .ant-form-item-label {
+        width: 100px;
+      }
+    }
+  }
+
+  .radioGroupSty {
+    position: relative;
+
+    .radioSty {
+      float: right;
+      width: 30px;
+      height: 16px;
+    }
+  }
+
+  .uploadBox {
+    .img {
+      width: 86px;
+    }
+
+    :global {
+      .ant-upload.ant-upload-select.ant-upload-select-picture-card {
+        position: relative;
+        padding: 8px;
+        margin: 0;
+
+        &:hover {
+          .zmage-del-wrap {
+            opacity: 1;
+            transition: opacity .2s;
+          }
+        }
+
+        .ant-upload {
+          display: flex;
+          align-items: center;
+          width: 86px;
+          height: 86px;
+          overflow: hidden;
+          padding: 0;
+
+          .anticon.anticon-plus {
+            // margin-top: 28px;
+          }
+
+          > div:not(.zmage-wrap) {
+            width: 100%;
+          }
+        }
+      }
+
+      .anticon-loading {
+        position: absolute;
+        left: calc(50% - 6px);
+        top: calc(50% - 6px);
+      }
+
+      .zmage-del-wrap {
+        opacity: 0;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        // width: 34px;
+        // height: 34px;
+        transition: opacity 0.2s;
+
+        .icon-del {
+          position: absolute;
+          right: 0px;
+          top: 0;
+          padding: 4px 7px;
+          color: #fff;
+          background: rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+  }
+
+  :global {
+    .ant-checkbox {
+      display: inline-block;
+      margin-top: -3px;
+      margin-left: 30px;
+    }
+  }
+
+}

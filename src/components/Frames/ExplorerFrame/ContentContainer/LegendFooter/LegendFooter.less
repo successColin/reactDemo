@@ -1,0 +1,36 @@
+.wrap {
+  position: relative;
+  padding-top: 18px;
+  height: auto;
+  transition: height 0.2s;
+  &.hide {
+    height: 24px;
+    transition: height 0.2s;
+  }
+  .trigger {
+    border-top: 1px solid #ececec;
+    .triggerIcon {
+      position: absolute;
+      top: 0;
+      background: #fff;
+      color: #ececec;
+      left: calc(50% - 70px);
+      cursor: pointer;
+    }
+  }
+  .legendWrap {
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    ul {
+      &:after {
+        content: '';
+        clear: both;
+      }
+      li {
+        float: left;
+        margin: 9px 12px;
+      }
+    }
+  }
+}

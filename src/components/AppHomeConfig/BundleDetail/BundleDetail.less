@@ -1,0 +1,113 @@
+@import '../../../styles/base.less';
+
+@footerHeight: 42px;
+
+.wrap {
+  height: 100%;
+  position: relative;
+
+  :global {
+    .ant-form-item {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    .ant-form-item-label {
+      justify-content: flex-start;
+      padding: 0;
+      height: 26px;
+    }
+  }
+}
+
+.formWrap {
+  overflow: auto;
+  height: calc(100% - 93px);
+  overflow: auto;
+
+  :global {
+    .ant-form-item-label {
+      width: 100% !important;
+    }
+  }
+}
+
+.content {
+  height: calc(100% - @footerHeight);
+  padding: 0 10px;
+
+  .tit {
+    line-height: 50px;
+    font-size: 16px;
+    color: #111;
+    border-bottom: @borderStyle;
+
+    .titBox {
+      width: 100%;
+      line-height: 40px;
+      border-bottom: 1px solid #EBEBEB;
+    }
+
+    .configBtn {
+      //float: right;
+      width: 100%;
+      margin-top: 10px;
+      text-align: center;
+
+      :global {
+        .icon-setting {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+}
+.urlbox{
+  display: flex;
+  .urlBoxLeft {
+    width: 80px;
+    margin-right: 8px;
+    .icon{
+      margin-right: 4px;
+    }
+    :global {
+      .ant-btn {
+        min-width: 80px;
+        padding: 0 10px
+      }
+    }
+  }
+}
+.footer {
+  border-top: @borderStyle;
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: @footerHeight;
+  padding-right: 20px;
+}
+
+.colorPickerWrap {
+  text-align: right;
+
+  :global {
+    .ant-btn {
+      line-height: 24px;
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.modal {
+  :global {
+    .ant-modal-header {
+      border-bottom: none;
+    }
+
+    .ant-modal-body {
+      padding: 0 14px;
+    }
+  }
+}

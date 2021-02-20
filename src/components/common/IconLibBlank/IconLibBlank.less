@@ -1,0 +1,21 @@
+@import '../../../styles/base.less';
+
+.wrap {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  .treeWrap,
+  .iconWrap {
+    height: 100%;
+    overflow: auto;
+  }
+  .treeWrap {
+    width: 26%;
+    min-width: 215px;
+    border-right: @borderStyle
+  }
+  .iconWrap {
+    flex: 1;
+    // padding-bottom: 16px;
+  }
+}

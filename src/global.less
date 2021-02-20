@@ -1,0 +1,312 @@
+@import './styles/base.less';
+@import './styles/iconfont.less';
+@font-face{
+  font-family: 'SourceHanSansCN';
+  src:url("./styles/font/SourceHanSansCN-Regular.woff2") format("woff2"),
+      url("./styles/font/SourceHanSansCN-Regular.woff") format("woff"),
+      url("./styles/font/SourceHanSansCN-Regular.ttf") format("truetype"),
+      url("./styles/font/SourceHanSansCN-Regular.eot") format("embedded-opentype"),
+      url("./styles/font/SourceHanSansCN-Regular.svg") format("svg");;
+}
+html,
+body {
+  font-size: 12px;
+  // font-family: 'SourceHanSansCN';
+  // font: 14px/1.5 'Helvetica Neue',Helvetica,Arial,'Microsoft Yahei','Hiragino Sans GB','Heiti SC','WenQuanYi Micro Hei',sans-serif;
+  font-family: "-apple-system,BlinkMacSystemFont,SourceHanSansCN,'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue','Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'";
+}
+
+ul,
+li,
+div,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  line-height: initial;
+}
+
+:global {
+  .hide {
+    display: none;
+  }
+  /*滚动条样式：谷歌浏览器下*/
+  ::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+    background-color: #f5f7fa;
+  }
+  /*滚动条的轨道*/
+  ::-webkit-scrollbar-track{
+    /*box-shadow: inset 0 0 5px rgba(0,0,0,.3);*/
+    background-color: #f5f7fa;
+
+  }
+  /*滚动条的滑块按钮*/
+  ::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #e4e7ed;
+    /*box-shadow: inset 0 0 5px #000;*/
+  }
+  /*滚动条的上下两端的按钮*/
+  ::-webkit-scrollbar-button{
+    height: 0px;
+    width: 0px;
+    background-color: #B0AEDA;
+  }
+  .el_tableDiv{
+    height: 420px;
+    overflow-y:auto;
+  }
+  // 校验信息
+  .cusstom-valid-message {
+    display: flex;
+
+    .iconfont {
+      margin-right: 4px;
+      margin-top: 1px;
+      font-size: 14px;
+    }
+  }
+  // 透明圆角搜索框（用在CToolContainer）
+  .light-circle-search {
+    background: none;
+    border-radius:16px;
+    border:1px solid rgba(235,235,235,1);
+    :global {
+      input {
+        background: none;
+        border-radius: 16px;
+        border: none;
+      }
+      * {
+        color: #fff;
+      }
+    }
+  }
+
+  // 配置界面中的tab（框架+面板）
+  .custom-content-tabs {
+    .ustom-content-tabs > div {
+
+    }
+  }
+  // 触发器事件列表、APP界面配置的用户设计组列表
+  .custom-vertical-tab.ant-tabs {
+    .ant-tabs-bar {
+      width: 100%;
+      margin-right: 0;
+    }
+    .ant-tabs-left-bar {
+      border: none;
+    }
+    .ant-tabs-content {
+      padding: 0;
+      height: 100%;
+      .ant-tabs-tabpane.ant-tabs-tabpane-active {
+        height: 100%;
+      }
+    }
+    .ant-tabs-left-bar .ant-tabs-tab {
+      padding: 8px 24px;
+      transition: all .2s;
+      margin: 0;
+      text-align: left;
+      &.ant-tabs-tab-active {
+        background: #F5F5F5;
+        transition: all .2s;
+      }
+      .iconfont,
+      .anticon.anticon-loading {
+        margin-left: 12px;
+      }
+    }
+  }
+
+  // 按钮
+  .ant-btn {
+    line-height: @btnHeight;
+    border-radius: 4px;
+    min-width: 85px;
+    // background: @btnDefaultBg;
+    // color: #fff;
+
+    &:hover,
+    &:focus {
+      // background-color: @btnHoverBg;
+      border-color: @btnHoverBg;
+      color: inherit;
+    }
+
+    &.custom-btn {
+      background: none;
+      color: #111111;
+      padding: 0 8px;
+      display: flex;
+      align-items: center;
+
+      .iconfont {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .custom-text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .ant-form-item {
+    margin-bottom: 8px;
+    position: relative;
+
+    .ant-form-item-control-wrapper {
+      position: static;
+      .ant-calendar-picker {
+        width: 100%;
+      }
+
+      .ant-form-item-control.has-error {
+        position: static;
+        animation: none;
+        transition: none;
+
+        .ant-form-item-children {
+          > span * {
+            border-color: #FAAD14;
+          }
+        }
+        .custom-braft-editor {
+          border-color: #FAAD14!important;
+        }
+
+        .ant-form-explain {
+          position: absolute;
+          right: 0;
+          bottom: -15px;
+          padding: 4px 10px;
+          width: auto;
+          background: #fff;
+          border-radius: 4px;
+          box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.1);
+          color: #FAAD14;
+          z-index: 2;
+          font-size: 10px;
+          &.show-help-enter,
+          &.show-help-enter-active,
+          &.show-help-leave,
+          &.show-help-leave-active
+          &.show-help-appear {
+            animation: none;
+            transition: none;
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+
+  .ant-form-item-label > label {
+    color: @baseColor;
+    font-size: 12px;
+  }
+
+  .ant-modal-footer {
+    background: @moadlFooterBg;
+  }
+
+  .ant-form {
+    .ant-form-item-children textarea {
+      margin-top: @cubeMargin;
+    }
+
+    .ant-form-item-control {
+      line-height: @widgetHeight;
+    }
+  }
+
+  .ant-table-thead > tr > th, .ant-table-tbody > tr > td {
+    padding: 8px 16px;
+  }
+  .ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-body > table > .ant-table-tbody > tr > td {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+  .ant-form-item-children *,
+  .ant-select-dropdown,
+  .ant-form label,
+  .ant-input,
+  .ant-select,
+  .ant-calendar,
+  .ant-tree li,
+  .ant-table-header .ant-table-fixed .ant-table-thead th {
+    font-size: 12px;
+  }
+  .ant-rate-star * {
+    font-size: 22px;
+  }
+  .ant-checkbox-wrapper {
+    line-height: 32px;
+  }
+
+  .clickRowStyl {
+    background: #d8f8ff;
+  }
+  .ant-card-head-tabs{
+    overflow: hidden;
+  }
+  .ant-steps-item-title{
+    font-size: 14px;
+  }
+  .ant-steps-item-description{
+    font-size: 12px;
+  }
+  .ant-steps-item-icon{
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+    font-size: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    line-height: 22px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 32px;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-top: 5px
+  }
+  .ant-tabs-tab-prev,.ant-tabs-tab-next{
+    border-left: 1px solid #EBEBEB;
+  }
+
+  .waveClick{
+    overflow: hidden;
+    &::after{
+      content: '';
+      position: absolute;
+      border-radius:50%;
+      width: 100%;
+      height: 0;
+      padding: 50% 0;
+      left: 50%;
+      top: 50%;
+      transform-origin: 50% 50%;
+      z-index: 1;
+      transform: translate(-50%,-50%) scale(1);
+      background: transparent;
+      transition: all .8s
+    }
+    &:active{
+      &::after{
+        transform: translate(-50%,-50%) scale(0);
+        background: rgba(255,255,255,.5);
+        transition: 0s;
+      }
+    }
+  }
+}

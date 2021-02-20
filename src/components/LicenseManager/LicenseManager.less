@@ -1,0 +1,165 @@
+@import '../../styles/base.less';
+
+
+.listBox {
+  margin: 5px auto;
+
+  li {
+    display: flex;
+    height: 32px;
+    line-height: 32px;
+    cursor: pointer;
+  }
+
+  li:hover {
+    background: rgba(245, 245, 245, 1);
+  }
+}
+
+.rightBox {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  margin: 0 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 1);
+}
+
+.on {
+  border-left: 3px solid @defaultcolor;
+  background: rgba(245, 245, 245, 1);
+
+  :first-child {
+    margin: 0 7px 0 35px;;
+  }
+}
+
+.iconStyle {
+  float: left;
+  margin: 0 7px 0 38px;
+  font-size: 18px !important;
+  color: @defaultcolor;
+}
+
+.searchHead {
+  margin: 8px 18px;
+  overflow: hidden;
+
+  .headLeft {
+    float: left;
+    display: flex;
+    width: 271px;
+
+    div {
+      flex: 1;
+      width: 85px;
+      height: 32px;
+      margin-right: 8px;
+      line-height: 32px;
+      text-align: center;
+      background: rgba(255, 255, 255, 1);
+      border-radius: 4px;
+      border: 1px solid rgba(217, 217, 217, 1);
+      cursor: pointer;
+    }
+  }
+
+  .headRight {
+    float: right;
+  }
+}
+
+.rightInputSearch {
+  width: 226px;
+  height: 32px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 4px;
+  //border:1px solid rgba(235,235,235,1)
+}
+
+.tabkeBox {
+  margin: 0 18px;
+  height: 100%;
+  //.ant-table-tbody {
+  //  height: ~"calc(100% - 102px)";
+  //  scroll-y: scroll;
+  //}
+
+}
+
+.ulMenuBox {
+  width: 130px;
+  position: absolute;
+  left: 160px;
+  display: none;
+  //border: 1px solid #c5c5c5;
+  z-index: 100;
+  //border-bottom: none;
+  text-align: left;
+
+  li {
+    display: block;
+    min-width: 100px;
+    padding: 0 15px;
+    height: 34px;
+    line-height: 34px;
+    //border-bottom: 1px solid #c5c5c5;
+    color: #575757;
+    cursor: pointer;
+  }
+
+  li:hover {
+    background: #f5f5f5;
+  }
+
+  .ulMenuBoxLi {
+    height: 32px;
+    margin: 0 !important;
+    line-height: 32px;
+  }
+}
+
+.import {
+  width: 100%;
+
+  :global {
+    .ant-upload-select-text {
+      width: 100%;
+    }
+
+    .iconUpload {
+      float: right;
+      height: 100%;
+      width: 16px;
+      padding-left: 6px;
+      border-left: 1px solid rgba(235, 235, 235, 1);
+      color: @defaultcolor;
+    }
+  }
+}
+.halfTable{
+  width: 50%;
+  float: left;
+  padding-right: 20px;
+  .border{
+    border: 1px solid #EBEBEB;
+    h2{
+      text-indent: 17px;
+      font-size: 16px;
+      line-height: 40px;
+      margin: 0;
+      font-weight: 600;
+    }
+  }
+}
+.downloadBtn{
+  width: 150px;
+  height: 32px;
+  line-height: 32px;
+  color: #fff;
+  text-align: center;
+}
+.licStateFalse{
+  color: @defaultcolor;
+}

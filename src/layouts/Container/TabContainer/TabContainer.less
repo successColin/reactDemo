@@ -1,0 +1,95 @@
+@import '../../../styles/base.less';
+
+@cubeMargin: 10px;
+.wrap {
+  width: 100%;
+  display: inline-block;
+}
+
+:global {
+  .custom-main-tab {
+    .ant-tabs-content {
+      height: calc(100% - @mainTabContentHeight - @cubeMargin);
+      // height: calc(100% - @mainTabContentHeight - 10);
+      position: relative;
+      overflow: hidden;
+
+      .ant-tabs-tabpane.ant-tabs-tabpane-inactive {
+        height: 100%;
+        position: absolute;
+      }
+    }
+
+    .ant-tabs-nav > div {
+      //height: @mainTabContentHeight;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .ant-tabs-ink-bar {
+      display: none !important;
+    }
+
+    > .ant-tabs-bar {
+      padding-left: @contentLeftWidth;
+      height: @mainTabContentHeight;
+      line-height: @mainTabContentHeight;
+      background: @containerBg;
+      margin-bottom: @cubeMargin;
+      box-shadow: 0px -1px 0px 0px #EBEBEB;
+
+      .ant-tabs-nav-container .ant-tabs-nav-wrap {
+        .ant-tabs-tab {
+          background: unset;
+          height: @mainTabContentHeight;
+          line-height: @mainTabContentHeight;
+          color: #8D8D8D;
+          text-align: center;
+          padding: 0 20px;
+          font-size: 12px;
+          border-radius: 0px;
+          margin: 0;
+          border: none;
+          border-right: 1px solid #EBEBEB;
+          transition: all .5s;
+
+          &:hover .anticon-close {
+            opacity: 0;
+          }
+
+          .iconfont {
+            font-size: 20px;
+            color: #AAAAAA;
+          }
+
+          .icon-close {
+            font-size: 12px;
+            // position: absolute;
+            // right: 6px;
+            // top: 0px;
+            margin-left: 12px;
+          }
+
+          span {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: inline-block;
+          }
+        }
+
+        .ant-tabs-tab:first-child {
+          border-left: 1px solid #EBEBEB;
+        }
+
+        .anticon-close {
+          opacity: 0;
+          position: absolute;
+          top: 2px;
+          right: 20px;
+        }
+      }
+    }
+  }
+}

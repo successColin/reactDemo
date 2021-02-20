@@ -1,0 +1,31 @@
+@import '../styles/base.less';
+
+.wrap {
+  // min-width: @minScreenWidth;
+}
+.contentWrap {
+  height: calc(100vh - @headerHeight);
+  position: relative;
+  background:rgba(245,245,245,1);
+  padding-left: @sidebarWidth;
+  :global {
+    .ant-layout-content {
+      position: relative;
+    }
+    .ant-tabs,
+    .ant-tabs-tabpane {
+      height: 100%;
+    }
+    .ant-tabs,
+    // .ant-tabs-content,
+    .ant-tabs-tabpane {
+      overflow: auto;
+    }
+  }
+}
+.menuCenterContentWrap{
+  padding-left: 0
+}
+.showSidebar {
+  // padding-left: @sidebarWidth;
+}

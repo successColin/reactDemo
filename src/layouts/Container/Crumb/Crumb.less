@@ -1,0 +1,59 @@
+@import '../../../styles/base.less';
+
+.wrap {
+  position: absolute;
+  display: flex;
+  width: @contentLeftWidth;
+  height: @mainTabContentHeight;
+  line-height: @mainTabContentHeight;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  z-index: 1;
+  // > span {
+  //   cursor: pointer;
+  // }
+  .path {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 4px;
+  }
+  .refresh {
+    display: flex;
+    padding-right: 8px;
+    margin-right: 8px;
+    position: relative;
+    cursor: pointer;
+    span,
+    span:after {
+      transition: color .2s;
+    }
+    &:hover {
+      span,
+      span:after {
+        color: @defaultcolor;
+        transition: color .2s;
+      }
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 15px;
+      display: inline-block;
+      width: 1px;
+      height: 14px;
+      background-color: #EBEBEB;
+    }
+    :global {
+      .iconfont{
+        font-size: 16px;
+        margin-right: 6px;
+        display: inline-block;
+        color: #D9D9D9;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import '../../../../../styles/base.less';
+
+.wrap {
+  height: @footerHeight;
+  line-height: @footerHeight;
+  background: @containerBg;
+  position: fixed;
+  bottom: 0;
+  width: calc(100% - @sidebarWidth - @contentLeftWidth);
+  text-align: right;
+  box-shadow: 4px 1px 6px -2px #ccc;
+
+  :global {
+    .ant-btn {
+      margin-right: 32px;
+    }
+  }
+}
+
+.wrapModal {
+  height: @footerHeight;
+  line-height: @footerHeight;
+  background: @containerBg;
+  width: 100%;
+  text-align: right;
+  box-shadow: 4px 1px 6px -2px #ccc;
+
+  :global {
+    .ant-btn {
+      margin-right: 32px;
+    }
+  }
+}

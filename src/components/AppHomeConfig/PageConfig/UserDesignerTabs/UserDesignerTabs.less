@@ -1,0 +1,57 @@
+.tabs {
+  .tabTit {
+    min-height: 20px;
+    position: relative;
+  }
+  .name {
+    display: block;
+    text-overflow: ellipsis;
+    width: 82px;
+    overflow: hidden;
+  }
+  .iconWrap {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  :global {
+    .ant-tabs-tab {
+      padding: 8px 16px!important;
+      &:not(.ant-tabs-tab-active) {
+        .iconfont {
+          opacity: 0;
+          transition: all .2s;
+        }
+      }
+      &:hover {
+        .iconfont {
+          opacity: 1;
+          transition: all .2s;
+        }
+      }
+      // .icon-del {
+      //   float: right;
+      // }
+      // .icon-copy {
+      //   float: right;
+      // }
+    }
+  }
+}
+.wrap {
+  h1 {
+    margin: 0;
+    margin-left: 16px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+    font-weight: 500;
+    :global {
+      .iconfont {
+        float: right;
+        margin-right: 22px;
+        cursor: pointer;
+      }
+    }
+  }
+}

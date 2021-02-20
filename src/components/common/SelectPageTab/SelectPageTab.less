@@ -1,0 +1,26 @@
+@import '../../../styles/base.less';
+
+.tabs {
+  height: 100%;
+  .treeBox {
+    height: 100%;
+    overflow: auto;
+  }
+  :global {
+    .ant-tabs-content {
+      height: calc(100% - 44px - 16px);
+      // overflow: auto;
+    }
+    .ant-tabs-nav {
+      width: 100%;
+    }
+    .ant-tabs-tab {
+      width: 50%;
+      margin: 0;
+      text-align: center;
+    }
+    .ant-tabs-bar .ant-tabs-nav-container .ant-tabs-nav-wrap .ant-tabs-tab:not(.ant-tabs-tab-active) span {
+      color: #111;
+    }
+  }
+}

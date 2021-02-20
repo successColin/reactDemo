@@ -1,0 +1,145 @@
+@import '../../../styles/base.less';
+
+.wrap {
+  width: 336px;
+  font-size: 12px;
+  .nameWrap {
+    display: flex;
+    align-items: center;
+    padding: 18px;
+    .avatar {
+      width: 54px;
+      height: 54px;
+      line-height: 54px;
+      text-align: center;
+      border-radius: 50%;
+      background: #fff;
+      margin-right: 14px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        line-height: 100%;
+        display: block;
+      }
+    }
+    p {
+      color: #111;
+      font-size: 14px;
+    }
+    span {
+      color: #808080;
+    }
+  }
+  .exitWrap {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-top: @borderStyle;
+    transition: all .2s;
+    &:hover {
+      background: #fbfbfb;
+      transition: all .2s;
+    }
+  }
+}
+.contentWrap {
+  min-height: 240px;
+  .content {
+    padding: 26px 20px 26px 26px;
+    color: #808080;
+    max-height: 350px;
+    overflow: auto;
+    p {
+      margin-bottom: 14px;
+    }
+  }
+  .tabWrap {
+    font-size: 12px;
+    :global {
+      .ant-card-body {
+        padding: 0;
+      }
+      .ant-card-head {
+        min-height: 42px;
+        padding: 0;
+      }
+      .ant-tabs-bar {
+        border-bottom: none;
+      }
+      .ant-tabs-nav {
+        width: 100%;
+      }
+      .ant-tabs-bar .ant-tabs-nav-container .ant-tabs-nav-wrap .ant-tabs-tab {
+        padding: 0 10px;
+        text-align: center;
+        min-width: 33.33%;
+        font-size: 12px;
+      }
+      .ant-tabs-bar .ant-tabs-nav .ant-tabs-ink-bar {
+        bottom: 1px;
+        position: relative;
+      }
+    }
+  }
+}
+.basicInfo {
+  .mobile,
+  .email {
+    display: inline-block;
+    margin-left: 10px;
+    color: #111;
+  }
+  .email {
+    margin-left: 22px;
+  }
+}
+.puaList {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+  li {
+    width: 66px;
+    height: 66px;
+    margin: 0 4px 4px 0;
+    padding: 4px;
+    border: @borderStyle;
+    > div {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+.securitySetting {
+  p {
+    display: flex;
+    align-items: center;
+  }
+  .level_1 {
+    color: #D3444A;
+  }
+  .level_2 {
+    color: #FA943F;
+  }
+  .level_3 {
+    color: #FFCD5B;
+  }
+}
+.modal {
+  :global {
+    .ant-modal-body {
+      padding-top: 20px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@defaultHeight: 23px;
+.cellSelect, .cellInput, .cellNormalSelect {
+  width: 90% !important;
+}
+
+.cellHeight {
+  min-height: 16px;
+  width: 90%;
+  padding-right: 24px;
+}
+
+.form {
+  margin: 0 !important;
+
+  :global {
+    .ant-form-item-control, .ant-select-selection__rendered {
+      line-height: @defaultHeight;
+    }
+
+    .ant-input-number {
+      height: @defaultHeight;
+      line-height: @defaultHeight;
+    }
+
+    .ant-input-number-input, .ant-select-selection--single, .ant-input {
+      height: @defaultHeight;
+    }
+
+    .ant-calendar-picker {
+      min-width: 100px !important;
+    }
+  }
+
+}
+

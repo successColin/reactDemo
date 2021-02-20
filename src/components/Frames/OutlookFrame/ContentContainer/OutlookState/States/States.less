@@ -1,0 +1,46 @@
+.state {
+  display: inline-block;
+  height: 32px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  border: 1px solid #EBEBEB;
+  margin: 12px 8px 12px 8px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  user-select:none;
+  div {
+    display: inline-block;
+  }
+  .textName {
+    width: 38px;
+    border-right: 1px solid #EBEBEB;
+    text-align: center;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 0 0 10px;
+    color: #808080;
+  }
+  .circle {
+    margin: 0 5px;
+    margin-bottom: 7px;
+    span {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: all 0.8s;
+    }
+    span:first-child {
+      margin-left: -5px;
+    }
+    span:hover {
+      transform: scale(1.1);
+    }
+  }
+  .isVis {
+    display: none;
+  }
+}

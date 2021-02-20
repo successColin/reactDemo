@@ -1,0 +1,31 @@
+@import '../../../../../styles/base.less';
+
+.wrap {
+  height: @footerHeight;
+  line-height: @footerHeight;
+  background: @containerBg;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  //width: calc(100% - @sidebarWidth - @contentLeftWidth);
+  z-index: 44;
+  text-align: right;
+  box-shadow: 4px 1px 6px -2px #ccc;
+  :global {
+    .ant-btn {
+      margin-right: 32px;
+    }
+  }
+}
+.btnClass {
+  background: @defaultcolor !important;
+  &>span{
+    color: #fff;
+  }
+  :global{
+    .anticon-loading{
+      color: #fff;;
+    }
+  }
+}

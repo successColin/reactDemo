@@ -1,0 +1,106 @@
+@import '../../../../styles/base.less';
+
+.cardWrap {
+  padding: 20px;
+  min-width: 750px;
+  text-align: center;
+  .card {
+    height: 197px;
+    width: 100%;
+    border: @borderStyle;
+    transition: all .2s;
+    margin-bottom: 16px;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 1px 5px 20px #eee;
+    }
+  }
+  .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    p {
+      color: #808080;
+      font-size: 12px;
+      padding: 3px 0;
+      &.title {
+        color: #111111;
+      }
+    }
+  }
+  .info {
+    height: 150px;
+    display: flex;
+    :global {
+      .icon-app {
+        font-size: 90px;
+        line-height: 150px;
+        margin: 0 20px;
+        color: #4D7ABE;
+      }
+    }
+  }
+  .operator {
+    height: 46px;
+    line-height: 46px;
+    border-top: @borderStyle;
+    padding: 0 24px;
+    position: relative;
+    text-align: left;
+    .icon {
+      margin-right: 33px;
+    }
+    .editIcon {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      color: #fff;
+      font-size: 21px;
+      margin-left: -4px;
+    }
+    .editIconWrap {
+      position: absolute;
+      right: 18px;
+      top: -29px;
+      text-align: center;
+      border-radius: 116px 116px 0 0;
+      height: 29px;
+      width: 54px;
+      z-index: 0;
+      background: #EBEBEB;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        border-radius: 112px 112px 0 0;
+        height: 41px;
+        width: 52px;
+        background: #fff;
+        z-index: 1;
+      }
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 5px;
+        top: 4px;
+        border-radius: 50%;
+        height: 44px;
+        width: 44px;
+        background: #EBEBEB;
+        z-index: 2;
+      }
+    }
+  }
+}
+.modal {
+  :global {
+    .ant-modal-header {
+      border: none;
+    }
+  }
+}
+

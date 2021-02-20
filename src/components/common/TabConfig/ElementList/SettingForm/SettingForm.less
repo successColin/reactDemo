@@ -1,0 +1,58 @@
+@import '../../../../../styles/base.less';
+.wrap {
+  :global {
+    .ant-form-item-label {
+      width: 120px;
+    }
+  }
+}
+.copyEntry {
+  display: inline-block;
+  margin-left: 5px;
+  width: 131px;
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover {
+    color: @defaultcolor;
+  }
+}
+.muneConfig{
+  margin-bottom: 5px;
+}
+.triggerWrap {
+  border-top: @borderStyle;
+  display: flex;
+  justify-content: center;
+  .trigger {
+    min-width: 116px;
+    text-align: center;
+    line-height: 34px;
+    cursor: pointer;
+    transition: color .2s;
+    position: relative;
+    &.disabled {
+      color: #ccc;
+      cursor: not-allowed;
+    }
+    &:not(.disabled):hover {
+      :global {
+        span:not(.iconfont) {
+          color: #111111;
+          transition: color .2s;
+        }
+      }
+    }
+    :global {
+      .iconfont {
+        display: inline-block;
+        margin-right: 10px;
+      }
+      .icon-new {
+        position: absolute;
+        right: 0;
+        top: -8px;
+        font-size: 20px;
+      }
+    }
+  }
+}

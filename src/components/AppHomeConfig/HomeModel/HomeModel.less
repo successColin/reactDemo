@@ -1,0 +1,241 @@
+@import '../../../styles/base.less';
+@blockMargin: 5px;
+
+.wrap {
+  background: #FAFAFA;
+  width: 280px;
+  margin: 0 auto;
+}
+.blockWrap {
+  background: #fff;
+  margin-bottom: @blockMargin;
+  border: @borderStyle;
+  transition: all .2s;
+  cursor: pointer;
+  &:hover,
+  &.active {
+    border-color: @defaultcolor;
+    transition: all .2s;
+    .operatorWrap {
+      opacity: 1;
+      transition: all .2s;
+    }
+  }
+}
+.item {
+  width: 30px;
+  height: 30px;
+  border: @borderStyle;
+  background: #EBEBEB;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  &:hover,
+  &.active {
+    border-color: @defaultcolor;
+    transition: all .2s;
+  }
+  .bundleIcon {
+    line-height: 30px;
+    font-size: 14px;
+  }
+  .changeGroup {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    i {
+      color: rgba(0,0,0,0.4);
+      line-height: 1;
+    }
+  }
+  :global {
+    .icon-app-delete {
+      background: #fff;
+      border-radius: 50%;
+      line-height: 1;
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      font-size: 12px;
+    }
+  }
+}
+// 顶部
+.topBar {
+  display: flex;
+  .blockWrap {
+    width: 50%;
+    padding: 0;
+    min-height: 42px;
+    &:last-child {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  .item {
+    margin-top: 6px;
+  }
+  .topLeftBar {
+    border-right: 1px solid #fff;
+    padding-bottom: 6px;
+    &:hover,
+    &.active {
+      border-color: @defaultcolor;
+    }
+    .item {
+      margin-left: 12px;
+    }
+  }
+  .topRightBar {
+    padding-bottom: 6px;
+    .item {
+      margin-right: 12px;
+    }
+  }
+}
+// 轮播图
+.bannerWrap {
+  height: 140px;
+}
+// 主功能区块
+.mainEntry {
+  padding: 12px 30px 0;
+  min-height: 72px;
+  .item {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    margin-bottom: 12px;
+    &:nth-child(3n - 1) {
+      margin: 0 37px 12px 37px;
+    }
+    :global {
+      .icon-app-placeholder {
+        line-height: 48px;
+      }
+    }
+  }
+}
+// 新增组
+.addGroup {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  :global {
+    .iconfont {
+      font-size: 12px;
+      transform: scale(.8);
+      display: inline-block;
+      margin-right: 4px;
+    }
+  }
+}
+.groupSpinWrap {
+  margin-bottom: @blockMargin;
+}
+
+.tit {
+  line-height: 30px;
+  padding: 0 12px;
+}
+// 分组
+.groupWrap {
+  position: relative;
+  min-height: 82px;
+  .operatorWrap {
+    position: absolute;
+    right: -24px;
+    top: 0;
+    opacity: 0;
+    transition: all .2s;
+    :global {
+      .iconfont {
+        font-size: 12px;
+        width: 24px;
+        line-height: 24px;
+        background: #9B9B9B;
+        color: #fff;
+        margin-bottom: 2px;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        transition: all .2s;
+        &:hover {
+          background: #8c8c8c;
+          transition: all .2s;
+        }
+      }
+    }
+  }
+  .groupItem {
+    margin-bottom: 5px;
+  }
+  .itemWrap {
+    padding: 0 18px;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+  }
+  .item {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 8px;
+    &:not(:first-child) {
+      margin-left: 27px;
+    }
+    &:nth-child(4n + 1) {
+      margin-left: 0;
+    }
+    &.style_2 {
+      width: 76px;
+      &:not(:first-child) {
+        margin-left: 7px;
+      }
+      &:nth-child(3n + 1) {
+        margin-left: 0;
+      }
+    }
+    &.style_3 {
+      width: 244px;
+      margin-left: 0;
+    }
+    &.style_4 {
+      width: 118px;
+      &:not(:first-child) {
+        margin-left: 6px;
+      }
+      &:nth-child(2n + 1) {
+        margin-left: 0;
+      }
+    }
+    :global {
+      .icon-app-placeholder {
+        line-height: 40px;
+      }
+    }
+  }
+}
+
+// 固定模块
+.staticBlock {
+  height: 80px;
+}
+// 底部栏
+.bottomWrap {
+  min-height: 42px;
+  .item {
+    margin: 4px 0 0 18px;
+  }
+}
+// bundle切换分组
+.overlayItem {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}

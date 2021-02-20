@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "module": "amd",
+      "target": "ES6",
+      "baseUrl": ".",
+      "paths":{
+          "@/*": ["src/*"]
+      }
+       
+  },
+  "exclude": [
+      "node_modules"
+  ],
+  "include": [
+      "./src/**/*"
+  ]
+}

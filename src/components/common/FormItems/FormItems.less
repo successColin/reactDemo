@@ -1,0 +1,58 @@
+@itemHeight: 32px;
+
+.wrap {
+  height: 100%;
+  width: 98%;
+  margin: 0 auto;
+  .itemWrap:after {
+      content: "."; display: block; height: 0; clear: both; visibility: hidden;
+  }
+  :global {
+    .ant-form-item {
+      display: flex;
+      padding-right: 20px;
+      &.hide {
+        display: none;
+      }
+    }
+    .ant-form-item-control-wrapper{
+      flex: 1;
+      .ant-form-item-control {
+        line-height: 1;
+      }
+      // .ant-input-number-input-wrap {
+      //   line-height: 1;
+      // }
+      .ant-radio-group {
+        line-height: 30px;
+      }
+      .ant-form-item-control .ant-form-item-children {
+        .ant-select,
+        .ant-input,
+        .ant-input-number {
+          width: 100%;
+          color: #111;
+          margin: 0;
+          &:disabled {
+            //color: inherit;
+          }
+        }
+      }
+    }
+    .ant-form-item-label {
+      width: 115px;
+      padding-right: 9px;
+      height: @itemHeight;
+      line-height: @itemHeight / 2;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      white-space: inherit;
+      > label{
+        color: #808080;
+        max-height: @itemHeight!important;
+        overflow: hidden;
+      }
+    }
+  }
+}

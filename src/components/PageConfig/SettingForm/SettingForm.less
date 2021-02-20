@@ -1,0 +1,39 @@
+@import '../../../styles/base.less';
+
+.wrap {
+  :global {
+    .ant-form-item-label {
+      width: 120px;
+    }
+  }
+}
+.triggerWrap {
+  border-top: @borderStyle;
+  display: flex;
+  justify-content: center;
+  .trigger {
+    width: 116px;
+    text-align: center;
+    line-height: 34px;
+    cursor: pointer;
+    transition: color .2s;
+    &.disabled {
+      color: #ccc;
+      cursor: not-allowed;
+    }
+    &:not(.disabled):hover {
+      :global {
+        span:not(.iconfont) {
+          color: #111111;
+          transition: color .2s;
+        }
+      }
+    }
+    :global {
+      .iconfont {
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+  }
+}

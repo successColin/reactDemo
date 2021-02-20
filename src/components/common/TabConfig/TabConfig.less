@@ -1,0 +1,76 @@
+@import '../../../styles/base.less';
+@footerHeight: 42px;
+
+.tabWrap {
+  padding: 0 20px 0 20px;
+  height: calc(100% - @footerHeight)!important;
+}
+.footer {
+  text-align: right;
+  line-height: @footerHeight;
+  &.PC {
+    margin: 0 20px;
+    border-right: @borderStyle;
+    border-left: @borderStyle;
+    padding-right: 14px;
+  }
+  &.APP {
+    margin: 0;
+    padding: 0 20px;
+    .btnWrap {
+      border-bottom: @borderStyle;
+      border-right: @borderStyle;
+      border-left: @borderStyle;
+      padding-right: 20px;
+    }
+  }
+}
+.rightBtn {
+  margin-top: -11px;
+}
+:global {
+  .custom-third-tab {
+    .ant-tabs-tabpane {
+      height: 100%;
+    }
+    .ant-tabs-bar .ant-tabs-nav-container {
+      height: 26px!important;
+      .ant-tabs-nav-wrap .ant-tabs-nav-scroll {
+        .ant-tabs-nav.ant-tabs-nav-animated > div {
+          height: 26px;
+          padding-left: 13px;
+        }
+        .ant-tabs-tab {
+          line-height: 26px;
+          height: 26px;
+          padding: 0 11px;
+          background: #EBEBEB;
+          color: #808080;
+          border: none;
+          font-size: 12px;
+          margin-right: 6px;
+          &:first-child,
+          &:last-child {
+            margin-right: 6px;
+            width: auto;
+            padding: 0 16px;
+            line-height: 26px;
+            height: 26px;
+          }
+          &.ant-tabs-tab-active {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .ant-tabs-bar.ant-tabs-top-bar.ant-tabs-card-bar {
+      margin: 0;
+      padding-top: 16px;
+    }
+    .ant-tabs-content.ant-tabs-top-content {
+      border: @borderStyle;
+      border-top: none;
+      height: calc(100% - 42px)!important;
+    }
+  }
+}

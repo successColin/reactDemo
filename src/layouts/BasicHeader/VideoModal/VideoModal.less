@@ -1,0 +1,144 @@
+@avatarDefaultWidth: 68px;
+@doIconWidth: 48px;
+@IconFontSize: 24px;
+@defaultcolor: rgba(255, 255, 255, 1);
+
+.wrapClassName {
+  .avatar {
+    width: @avatarDefaultWidth;
+    height: @avatarDefaultWidth;
+    line-height: @avatarDefaultWidth;
+    text-align: center;
+    border-radius: 50%;
+    background: #fff;
+    margin: 60px auto 0 auto;
+    overflow: hidden;
+
+    & > img {
+      width: 100%;
+    }
+  }
+
+  .invitName {
+    margin: 8px auto;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 29px;
+  }
+
+  .descrtion {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #D9D9D9;
+    line-height: 20px;
+  }
+
+  .audioWrap {
+    position: absolute;
+    top: 266px;
+    right: 74px;
+    bottom: 196px;
+    cursor: pointer;
+
+    .audio {
+      width: @doIconWidth;
+      height: @doIconWidth;
+      display: block;
+      color: @defaultcolor;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.3);
+      text-align: center;
+      line-height: @doIconWidth;
+      font-size: @IconFontSize;
+    }
+  }
+
+  .rejectedWrap {
+    position: absolute;
+    top: 358px;
+    left: 74px;
+    cursor: pointer;
+
+    .rejected {
+      width: @doIconWidth;
+      height: @doIconWidth;
+      display: block;
+      color: @defaultcolor;
+      border-radius: 50%;
+      background: rgba(248, 87, 58, 1);
+      text-align: center;
+      line-height: @doIconWidth;
+      font-size: @IconFontSize;
+    }
+  }
+
+  .videoWrap {
+    position: absolute;
+    top: 358px;
+    right: 74px;
+    cursor: pointer;
+
+    .video {
+      width: @doIconWidth;
+      height: @doIconWidth;
+      display: block;
+      color: @defaultcolor;
+      border-radius: 50%;
+      background: rgba(37, 182, 90, 1);
+      text-align: center;
+      line-height: @doIconWidth;
+      font-size: @IconFontSize;
+    }
+  }
+
+  .tit {
+    margin-top: 6px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #D9D9D9;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  :global {
+    .ant-modal {
+      width: 318px;
+      min-width: auto;
+      height: 480px;
+    }
+
+    .ant-modal-content {
+      width: 318px;
+      border-radius: 6px
+    }
+
+    .ant-modal-body {
+      border-radius: 6px;
+      background: linear-gradient(148deg, #22373A 0%, #263B3E 38%, #332C2C 62%, #203B3C 100%);
+    }
+
+    .ant-modal-header {
+      display: none;
+    }
+  }
+}
+
+.wrapContentDetial {
+  z-index: 23333;
+  overflow: hidden;
+
+  :global {
+    .ant-modal {
+      width: 100% !important;
+      height: 100%;
+      min-width: auto;
+    }
+
+    .ant-modal-header {
+      display: none;
+    }
+  }
+}

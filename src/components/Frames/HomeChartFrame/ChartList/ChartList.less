@@ -1,0 +1,66 @@
+@import '../../../../styles/base.less';
+
+@cubeMargin: 10px;
+@titleHeight: 54px;
+.col {
+  padding: 0 10px 10px 0;
+  height: 44%;
+}
+
+.block {
+  height: 100%;
+  background: #fff;
+  box-shadow: @boxShadow;
+  border-radius: 4px;
+}
+
+.more {
+  position: absolute;
+  padding: 5px 9px;
+  height: 24px;
+  background: #F5F5F5;
+  border-radius: 12px;
+  cursor: pointer;
+  right: 20px;
+  top: 15px;
+  line-height: 14px;
+  text-align: center;
+  font-weight: 400;
+  color: #808080;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  :global {
+    .icon-right {
+      margin-left: 3px;
+      font-size: 10px ;
+      line-height: 15px;
+      transform: scale(.8);
+      transform-origin: center center;
+    }
+  }
+}
+
+.more:hover {
+  color: #291810;
+  background: #EBEBEB;
+}
+
+.tit {
+  line-height: @titleHeight;
+  font-size: 16px;
+  color: #333333;
+  position: relative;
+  padding: 0 20px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 1;
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.content {
+  width: 100%;
+  height: calc(100% - 41px);
+}

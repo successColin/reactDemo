@@ -1,0 +1,59 @@
+@tagBg:rgba(255, 241, 231, 1);
+@tagColor:rgba(250, 100, 0, 1);
+.tagWrap {
+  height: 40px;
+  width: 100%;
+  line-height: 40px;
+  overflow: hidden;
+  .tagList{
+    height: 40px;
+    max-width: 95%;
+    float: left;
+    margin-left: 10px;
+  }
+  .ellipsis {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 1;
+    text-align: center;
+    color: @tagColor;
+    vertical-align: middle;
+    cursor: pointer;
+    background:@tagBg;
+  }
+
+  :global {
+    .ant-tag {
+      padding: 3px 7px;
+      background: @tagBg;
+      color: @tagColor;
+      border: none;
+
+      & > i, :hover {
+        color: @tagColor;
+      }
+    }
+  }
+}
+.popoverWrap{
+  width: 524px;
+  :global{
+    .ant-popover-inner-content{
+      padding: 10px 5px;
+    }
+    .ant-tag {
+      padding: 3px 7px;
+      margin: 4px;
+      background: @tagBg;
+      color: @tagColor;
+      border: none;
+
+      & > i, :hover {
+        color: @tagColor;
+      }
+    }
+  }
+}
+

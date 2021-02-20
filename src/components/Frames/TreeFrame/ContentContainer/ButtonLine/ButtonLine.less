@@ -1,0 +1,51 @@
+@import '../../../../../styles/base.less';
+
+.wrap {
+  // height: @footerHeight;
+  background: @containerBg;
+  position: fixed;
+  bottom: 0;
+  width: calc(100% - @sidebarWidth - @contentLeftWidth);
+  text-align: right;
+  box-shadow: 4px 1px 6px -2px #ccc;
+  z-index: 44;
+  .btn {
+    padding: 0 8px;
+  }
+  .btnIcon {
+    margin-right: 4px;
+  }
+  &.listBtnWrap {
+    position: static;
+    // float: left;
+    width: auto;
+    // width: 100%;
+    box-shadow: none;
+    text-align: left;
+    padding: 0 8px;
+    // height: 0; // @TODO:暂时为0
+  }
+  &.popup {
+    position: absolute;
+    width: auto;
+    right: 0;
+    bottom: 5px;
+    box-shadow: none;
+  }
+  &.relationPopup {
+    // float: left;
+    width: auto;
+    line-height: initial;
+  }
+  &.noBtn {
+    height: 0;
+  }
+  &.form {
+    line-height: @footerHeight;
+  }
+  :global {
+    .ant-btn {
+      margin-right: 16px;
+    }
+  }
+}

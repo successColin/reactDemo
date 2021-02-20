@@ -1,0 +1,120 @@
+@import '../../styles/base.less';
+
+.TabColor {
+  :global {
+    .ant-table-tbody>tr.ant-table-row-selected td{
+      background: none;
+    }
+    .ant-tabs-tabpane {
+      overflow: hidden !important;
+    }
+
+    .ant-tabs-bar {
+      margin: 0 !important;
+    }
+
+    .ant-tabs-top-bar {
+      padding-left: 0 !important;
+      height: 42px;
+
+      .ant-tabs-tab {
+        min-width: 112px !important;
+        height: 42px !important;
+        margin: 0;
+        font-size: 14px !important;
+        color: #111111;
+        text-align: center;
+        //line-height: 42px !important;
+        border: none !important;
+      }
+
+      .ant-tabs-tab-active {
+        border-radius: 0 !important;
+        text-align: center;
+        border-bottom: 2px solid #C62127 !important;
+      }
+
+      span {
+        width: 112px !important;
+      }
+    }
+
+
+  }
+}
+
+.searchHead {
+  margin: 8px 18px;
+  overflow: hidden;
+
+  .headLeft {
+    float: left;
+    //display: flex;
+    width: 465px;
+    overflow: hidden;
+
+    div {
+      //flex: 1;
+      float: left;
+      width: 85px;
+      height: 32px;
+      margin-right: 8px;
+      line-height: 32px;
+      text-align: center;
+      background: rgba(255, 255, 255, 1);
+      border-radius: 4px;
+      border: 1px solid rgba(217, 217, 217, 1);
+      cursor: pointer;
+    }
+  }
+
+  .headRight {
+    float: right;
+  }
+}
+
+.inputSearch {
+  display: block;
+  width: 226px !important;
+  margin: 5px auto;
+}
+
+.addNewBtn {
+  width: 224px;
+  height: 32px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 4px;
+  border: 1px solid rgba(235, 235, 235, 1);
+  line-height: 32px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.addnewBtnIco {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+}
+
+.modalForm {
+  padding-top: 31px;
+  box-sizing: border-box;
+}
+
+.tabHeight {
+  height: calc(90%) !important;
+  :global{
+    .ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-header > table > .ant-table-thead > tr > th,.ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-body > table > .ant-table-tbody > tr > td{
+      padding: 2px 8px;
+    }
+  }
+}
+
+:global {
+  .ant-radio-group {
+    height: 30px !important;
+  }
+}
+
+

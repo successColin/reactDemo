@@ -1,0 +1,69 @@
+.modalSearch {
+  position: absolute;
+  right: 47px;
+  top: 7px;
+  width: 38px;
+
+  &:not(.showInput) {
+    :global {
+      input {
+        border: none;
+      }
+    }
+  }
+
+  &.showInput {
+    :global {
+      input {
+        width: 200px;
+        position: absolute;
+        right: 0;
+
+        + .ant-input-suffix {
+          top: 16px;
+        }
+      }
+
+      .anticon.anticon-close-circle {
+        top: 0px;
+        position: absolute;
+        right: 16px;
+      }
+    }
+  }
+
+  :global {
+    .ant-input-suffix {
+      top: 16px;
+    }
+
+    input {
+      width: 38px;
+      position: absolute;
+      right: 0;
+      transition: width .2s;
+
+      &:focus {
+        width: 200px;
+        position: absolute;
+        right: 0;
+
+        + .ant-input-suffix {
+          top: 16px;
+        }
+      }
+    }
+  }
+}
+
+.tableNormal {
+  height: 100%;
+}
+
+.tableUnNormal {
+  height: calc(100% - 40px);
+}
+
+.modalWrap {
+  z-index: 23334;
+}

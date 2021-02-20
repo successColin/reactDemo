@@ -1,0 +1,120 @@
+.listWrap {
+  width: 100%;
+  height: 100%;
+  //margin: 0 10px;
+  overflow-y: scroll;
+
+  .whitepace {
+    margin-left: 5px;
+  }
+
+  .card {
+    margin: 0 !important;
+
+    .ColWrap {
+      height: 168px;
+      padding: 0 20px;
+      margin-top: 10px;
+      border: 1px solid #EBEBEB;
+      background: #FFFFFF;
+
+      .detial {
+        width: 100%;
+        height: 104px;
+        margin: 0 !important;
+        border-bottom: 1px solid #EBEBEB;
+
+        :global {
+          .ant-col {
+            height: 100%;
+          }
+        }
+
+        .titContent {
+          padding: 24px 0;
+
+          font-size: 12px;
+          font-weight: 400;
+          color: #808080;
+          line-height: 21px;
+
+          & > div:first-child {
+            font-size: 14px;
+            font-weight: 500;
+            color: #111111;
+            line-height: 22px;
+          }
+        }
+
+        .avatar {
+          display: flex;
+          padding: 0 !important;
+          align-items: center;
+          text-align: center;
+
+          & > img {
+            width: 68px;
+            //margin: 0 auto;
+          }
+        }
+
+        .detialState {
+          padding: 24px 0 0 0 !important;
+          text-align: right;
+
+          .stateColor {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #C62127;
+          }
+        }
+      }
+
+      .fork {
+        width: 100%;
+        height: 64px;
+        margin: 0 !important;
+
+        .forkRight {
+          height: 100%;
+          padding: 0 !important;
+          text-align: right;
+          line-height: 64px;
+        }
+
+        .forkLeft {
+          padding: 0 !important;
+          display: flex;
+          align-items: center;
+          height: 62px;
+
+          .going {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-left: -5px;
+          }
+
+          .going:first-child {
+            margin: 0;
+          }
+
+          .num {
+            margin-left: 6px;
+            font-size: 12px;
+            font-weight: 400;
+            color: #444444;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+
+    .ColWrap:hover {
+      box-shadow: rgb(238, 238, 238) 1px 5px 20px;
+      cursor: pointer;
+    }
+  }
+}

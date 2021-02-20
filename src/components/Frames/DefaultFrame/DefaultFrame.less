@@ -1,0 +1,65 @@
+@import '../../../styles/base.less';
+
+.wrap {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  &.hideSiderFooter { // 左侧树无底部栏时
+    .sidebar {
+      height: 100%;
+    }
+    .item {
+      height: calc(100% - @footerHeight);
+    }
+    :global {
+      .custom-footer-bar {
+        box-shadow: none;
+        border-top: @borderStyle;
+      }
+    }
+  }
+  &:not(.hasFooter) {
+    .item {
+      height: 100%;
+    }
+  }
+  .item {
+    height: 100%;
+    position: relative;
+    background: @containerBg;
+  }
+}
+.sidebar {
+  // width: @frameLeftWidth;
+  margin-right: @cubeMargin;
+  .leftHeader {
+    padding: @cubeMargin;
+  }
+  .treeWrap {
+    height: calc(100% - @treeSearchHeight - @footerHeight);
+    overflow: auto;
+    &.hasAbove {
+      height: calc(100% - @treeSearchHeight - @treeSearchHeight)
+    }
+  }
+}
+.contentWrap {
+  // width: calc(100% - @frameLeftWidth - @cubeMargin);
+  flex: 1;
+  margin-left: auto;
+  overflow: auto;
+  .content {
+    padding: 0 18px 20px 18px;
+    height: calc(100% - @footerHeight - @cubeMargin);
+    overflow: auto;
+    &.noPadding {
+      padding: 0;
+    }
+    &.noFooter {
+      height: calc(100% - @cubeMargin);
+    }
+  }
+  .footer {
+    margin-top: @cubeMargin;
+  }
+}

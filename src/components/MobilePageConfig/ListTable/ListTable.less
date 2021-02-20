@@ -1,0 +1,16 @@
+@headerFormHeight: 40px;
+.wrap {
+  height: calc(100% - @headerFormHeight);
+  .triggerWrap {
+    cursor: pointer;
+  }
+  .arrow {
+    font-size: 12px;
+      transform: rotate(180deg);
+      // transition: transform .2s;
+    &.close {
+      transform: rotate(90deg);
+      // transition: transform .2s;
+    }
+  }
+}

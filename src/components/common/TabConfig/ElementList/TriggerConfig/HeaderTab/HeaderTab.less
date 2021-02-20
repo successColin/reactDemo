@@ -1,0 +1,94 @@
+.card {
+  :global {
+    .ant-card-body {
+      padding: 7px 10px!important;
+    }
+  }
+}
+.tab {
+  display: inline-block;
+  text-align: center;
+  line-height: 42px;
+  height: 42px;
+  // background: #E8B43B;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  width: calc((100% - 27px) / 6);
+  border-bottom: 42px solid #E8B43B;
+  border-right: 10px solid;
+  cursor: pointer;
+  position: relative;
+  &.active {
+    &:before {    
+      content: '';
+      position: absolute;
+      z-index: 1;
+      width: 10px;
+      background: #fff;
+      height: 10px;
+      right: 0;
+      border-radius: 50%;
+      top: 27px;
+    }
+  }
+  &:first-child {
+    margin-right: 2px;
+  }
+  &.tab_2,
+  &.tab_3,
+  &.tab_4,
+  &.tab_5 {
+    position: relative;
+    background: none;
+    border: none;
+    margin-right: 7px;
+    > span {
+      z-index: 1;
+      position: relative;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      transform: skewX(14deg);
+      z-index: 0;
+    }
+  }
+  &.tab_2:after {
+    background-color: #BD4947;
+  }
+  &.tab_3:after {
+    background-color: #428680;
+  }
+  &.tab_4:after {
+    background-color: #4A6D8E;
+  }
+  &.tab_5:after {
+    background-color: #E8B43B;
+  }
+  &.tab_6 {
+    position: relative;
+    border: none;
+    margin-left: -3px;
+    > span {
+      z-index: 1;
+      position: relative;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; bottom: 0; left: 0;
+      border-top: 42px solid #D06743;
+      border-left: 10px solid;
+      border-bottom: none;
+      border-right: none;
+    }
+  }
+  :global {
+    .iconfont {
+      font-size: 14px;
+      margin-right: 10px; 
+    }
+  }
+}

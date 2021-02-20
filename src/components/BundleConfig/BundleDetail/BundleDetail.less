@@ -1,0 +1,31 @@
+@import '../../../styles/base.less';
+
+.contentWrap {
+  display: flex;
+  .form {
+    margin-right: auto;
+    flex: 1;
+  }
+  .phoneWrap {
+    width: 250px;
+    align-items: flex-end;
+    margin-left: 50px;
+    border: @borderStyle;
+    text-align: center;
+    padding: 11px;
+    .btn {
+      display: flex;
+      margin: 0 auto 6px auto;
+      i {
+        margin-right: 6px;
+      }
+    }
+  }
+}
+.configModal {
+  :global {
+    .ant-modal-body {
+      padding: 14px 14px 0 14px;
+    }
+  }
+}

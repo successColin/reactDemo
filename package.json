@@ -1,0 +1,82 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "test": "umi test",
+    "lint": "eslint --ext .js src",
+    "lint-fix": "eslint --fix --ext .js --ext .jsx src",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "antd": "^3.21.2",
+    "autoresponsive-react": "^1.1.31",
+    "axios": "^0.19.0",
+    "braft-editor": "^2.3.9",
+    "classnames": "^2.2.6",
+    "copy-to-clipboard": "^3.3.1",
+    "crypto-js": "^3.1.9-1",
+    "dhtmlx-gantt": "^7.0.10",
+    "dva": "^2.5.0-beta.2",
+    "echarts": "^4.3.0",
+    "eslint-loader": "^2.1.2",
+    "fabric": "^3.6.3",
+    "immutability-helper": "^3.0.1",
+    "jsbarcode": "^3.11.3",
+    "cos-js-sdk-v5": "^1.1.10",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "path-to-regexp": "^6.1.0",
+    "qrcode.react": "^1.0.0",
+    "qs-stringify": "^1.1.0",
+    "rc-tween-one": "^2.7.3",
+    "react": "^16.14.0",
+    "react-amap": "^1.2.8",
+    "react-color": "^2.17.3",
+    "react-cropper": "^1.3.0",
+    "react-dnd": "^9.3.4",
+    "react-dnd-html5-backend": "^9.3.4",
+    "react-dom": "^16.7.0",
+    "react-highlight-words": "^0.16.0",
+    "react-iframe": "^1.8.0",
+    "react-infinite-scroller": "^1.2.4",
+    "react-intl": "^2.8.0",
+    "react-resizable": "^1.10.1",
+    "react-to-print": "^2.7.0",
+    "react-zmage": "^0.8.5",
+    "tim-js-sdk": "^2.8.5",
+    "trtc-calling-js": "^0.6.0",
+    "trtc-js-sdk": "^4.7.1",
+    "tsignaling": "^0.3.0",
+    "umi-request": "^1.0.6"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.4.0",
+    "eslint-config-umi": "^1.4.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "react-test-renderer": "^16.7.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "umi": "^2.6.3",
+    "umi-plugin-react": "^1.6.0"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,tsx,json,jsx,less}": [
+      "node ./scripts/lint-prettier.js",
+      "git add"
+    ],
+    "**/*.less": "stylelint --syntax less",
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

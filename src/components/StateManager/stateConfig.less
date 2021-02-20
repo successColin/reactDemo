@@ -1,0 +1,88 @@
+@treeNodeMargin: 24px;
+@treeNodeHeight: 32px;
+.roleTab {
+  overflow: hidden;
+
+  :global {
+    .ant-tabs-tabpane {
+      overflow: hidden !important;
+    }
+
+    .ant-tabs-bar {
+      margin: 0 !important;
+    }
+
+    .ant-tabs-top-bar {
+      padding-left: 0 !important;
+      height: 42px;
+
+      .ant-tabs-tab {
+        width: 112px !important;
+        height: 42px !important;
+        font-size: 14px !important;
+        color: #111111;
+        //line-height: 42px !important;
+        border: none !important;
+      }
+
+      .ant-tabs-tab-active {
+        border-radius: 0 !important;
+        text-align: center;
+        border-bottom: 2px solid #C62127 !important;
+      }
+
+      span {
+        width: 112px !important;
+      }
+    }
+
+    .ant-table-body {
+      //height: calc(100% - 58px) !important;
+      max-height: inherit !important;
+    }
+
+    .ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-header > table > .ant-table-thead > tr > th {
+      padding: 2px 8px;
+    }
+  }
+
+  .openIcon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 7px;
+    font-size: 12px;
+  }
+
+  .checkSty {
+    margin-right: 3px;
+  }
+
+  .tabTitle {
+    width: 100%;
+    height: 42px;
+    font-size: 12px;
+    line-height: 42px;
+  }
+
+  .tabTitleSpan {
+    color: #C62127;
+  }
+}
+
+.tabHeight {
+  height: 90%;
+}
+
+.rowHeight {
+  display: flex;
+  height: calc(100% - 42px);
+}
+
+.delBtn {
+  line-height: 32px;
+}
+
+
+
+

@@ -1,0 +1,210 @@
+@import '../../../../../../styles/base.less';
+.wrap {
+  // padding: 0 30px;
+  overflow: auto;
+  height: 100%;
+}
+
+@treeNodeMargin: 24px;
+@treeNodeHeight: 32px;
+
+// 根据层级结构递增margin
+.level-loop(@n, @i:1) when (@i <= @n) {
+  .level-@{i} {
+    &.groupTit {
+      :global {
+        .ant-tree-switcher {
+          margin-left: @treeNodeMargin + @treeNodeMargin * @i / 2;
+        }
+        .ant-tree-node-content-wrapper {
+          width: calc(100% - @iconfontSize - (@treeNodeMargin + @treeNodeMargin * @i / 2))!important;
+        }
+      }
+    }
+    &.eleTit {
+      :global {
+        .ant-tree-switcher {
+          margin-left: @treeNodeMargin + @treeNodeMargin * @i / 2;
+        }
+        .ant-tree-node-content-wrapper {
+          width: calc(100% - @iconfontSize - 25px - (@treeNodeMargin + @treeNodeMargin * @i / 2))!important;
+        }
+      }
+    }
+  }
+  .level-loop(@n, (@i + 1));
+}
+
+.wrap {
+  height: 100%;
+  :global {
+    .ant-spin-nested-loading {
+      height: 100%;
+    }
+  }
+}
+.treeWrap {
+  font-size: @treeNodeFontSize;
+  width: max-content;
+  min-width: 100%;
+  .level-loop(20);
+  li {
+    position: relative;
+    padding: 0;
+    line-height: @treeNodeHeight;
+  }
+  // 不需要图标时(需要显示选择框时）
+  .noIcon {
+    :global {
+      .ant-tree-iconEle {
+        width: 0px;
+      }
+      .ant-tree-checkbox {
+        z-index: 1;
+      }
+    }
+  }
+  :global {
+    .iconfont {
+      font-size: @iconfontSize;
+      &.icon-more {
+        float: right;
+        margin-right: 6px;
+      }
+    }
+    li ul {
+      padding-left: 0;
+    }
+    .ant-tree-child-tree > li:first-child {
+      padding: 0;
+    }
+    .ant-tree-switcher,
+    .ant-tree-iconEle,
+    .ant-tree-title {
+      position: relative;
+      z-index: 1;
+    }
+    .ant-tree-title {
+      display: inline-block;
+      position: relative;
+      width: calc(100% - @iconfontSize);
+      .icon-more {
+        // display: none;
+        position: absolute;
+        right: 0;
+        top: 0
+      }
+    }
+    li.ant-tree-treenode-loading span.ant-tree-switcher.ant-tree-switcher_open {
+      left: -7px;
+      top: 4px;
+    }
+    li span.ant-tree-iconEle {
+      width: @iconfontSize;
+      margin-right: @cubeMargin;
+      height: @treeNodeHeight;
+      line-height: @treeNodeHeight;
+    }
+    li span.ant-tree-switcher {
+      width: @iconfontSize;
+      margin-left: 24px;
+    }
+    li.custom-tree-active > .ant-tree-node-content-wrapper {
+      &:after {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        background: @treeNodeSelectedBg;
+        height: @treeNodeHeight;
+        left: 0;
+        right: 0;
+        border: none;
+        // border-left: 3px solid ;
+        transition: all .2s;
+      }
+      .iconfont.icon-left {
+        transform: rotate(180deg) scale(0.8);
+        transition: transform .2s;
+      }
+    }
+    li span.ant-tree-checkbox {
+      z-index: 1;
+    }
+    // li .ant-tree-node-content-wrapper.ant-tree-node-selected {
+    //   background-color: unset;
+    // }
+    li .ant-tree-node-content-wrapper {
+      padding-left: 0;
+      transition: all .2s;
+      background-color: unset;
+      .ant-tree-title .icon-more {
+        display: none;
+      }
+      &:hover {
+        background: unset;
+        // .ant-tree-title .icon-more {
+        //   // display: none;
+        // }
+        // &:after {
+        //   content: '';
+        //   position: absolute;
+        //   z-index: 0;
+        //   background: @treeNodeSelectedBg;
+        //   height: @treeNodeHeight;
+        //   left: 0;
+        //   right: 0;
+        // }
+      }
+      &.ant-tree-node-selected {
+        background: none;
+        // .ant-tree-title .icon-more {
+        //   display: block;
+        // }
+        // &:after {
+        //   content: '';
+        //   position: absolute;
+        //   z-index: 0;
+        //   background: @treeNodeSelectedBg;
+        //   height: @treeNodeHeight;
+        //   left: 0;
+        //   right: 0;
+        //   border-left: 3px solid;
+        //   transition: all .2s;
+        // }
+      }
+    }
+    li span.ant-tree-switcher,
+    li span.ant-tree-node-content-wrapper,
+    li span.ant-tree-iconEle,
+    .ant-tree-title {
+      line-height: @treeNodeHeight;
+      height: @treeNodeHeight;
+    }
+  }
+  .groupTit {
+    :global {
+      .ant-tree-node-content-wrapper {
+        color: @groupTitColor;
+      }
+    }
+  }
+  .eleTit {
+    &.line {
+      :global {
+        .ant-tree-iconEle {
+          transform: scale(0.7)
+        }
+      }
+    }
+    :global {
+      .ant-tree-node-content-wrapper {
+        color: @baseColor;
+        width: 100%;
+      }
+    }
+  }
+  .elementIcon {
+    color: #D6D6D6;
+    font-size: 12px;
+  }
+}

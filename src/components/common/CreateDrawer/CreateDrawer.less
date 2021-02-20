@@ -1,0 +1,99 @@
+@import '../../../styles/base.less';
+@drawerHeaderHeight: 42px;
+@drawerTop: @drawerHeaderHeight + @mainTabContentHeight + @contentHeaderHeight + 34px;
+
+.wrap {
+  &.from_moduleLib {
+    :global {
+      .ant-drawer {
+        top: @drawerTop;
+        height: calc(100% - @drawerTop);
+      }
+      .ant-drawer-content-wrapper {
+        height: calc(100% - @drawerTop);
+      }
+      .ant-drawer-body {
+        height: calc(100% - @drawerHeaderHeight);
+        padding: 0;
+        overflow: auto;
+      }
+    }
+  }
+  &.from_menuCenter {
+    z-index: 999;
+    :global {
+      .ant-drawer-content-wrapper {
+        left: 0;
+        top: @headerHeight;
+      }
+      .ant-drawer-open {
+        .ant-drawer-content-wrapper,
+        .ant-drawer-mask {
+          left: @sidebarHoverWidth;
+          top: @headerHeight;
+          height: calc(100% - @headerHeight);
+          border-left: 1px solid #EBEBEB;
+        }
+      }
+    }
+
+  }
+  &.from_mainMenu {
+    :global {
+      .ant-drawer-header-no-title, 
+      .ant-drawer-header {
+        height: 0;
+        display: none;
+      }
+      .ant-drawer-body {
+        padding: 0;
+        background: #fff;
+      }
+      .ant-drawer-content-wrapper {
+        left: 0;
+        top: @headerHeight;
+      }
+      .ant-drawer-open {
+        .ant-drawer-content-wrapper,
+        .ant-drawer-mask {
+          top: @headerHeight;
+          height: calc(100% - @headerHeight);
+        }
+      }
+    }
+  }
+  &.maskTransparent {
+    :global {
+      .ant-drawer-mask {
+        opacity: 0;
+        transition: opacity 0s;
+      }
+    }
+  }
+  .drawer {
+    :global {
+      .ant-drawer-header {
+        padding: 0 20px;
+        height: @drawerHeaderHeight;
+        background: #FAFAFA;
+        .ant-drawer-title {
+          line-height: @drawerHeaderHeight;
+          font-size: 14px;
+          font-weight: 500;
+        }
+        .ant-drawer-close {
+          width: @drawerHeaderHeight;
+          height: @drawerHeaderHeight;
+          line-height: @drawerHeaderHeight;
+        }
+      }
+    }
+  }
+  :global {
+    .ant-drawer-open .ant-drawer-mask {
+      transition: opacity 0s;
+      animation: none;
+      opacity: 0;
+    }
+  }
+}

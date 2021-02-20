@@ -1,0 +1,41 @@
+@import '../../../styles/base.less';
+
+.toUse {
+  width: 100%;
+  margin-bottom: @cubeMargin;
+  text-align: left;
+  position: relative;
+  &:focus {
+    :global {
+      .iconfont {
+        color: #D9D9D9;
+        position: absolute!important;
+        right: 10px;
+      }
+    }
+  }
+  :global {
+    .iconfont {
+      color: #D9D9D9;
+      font-size: 12px;
+      position: absolute;
+      right: 10px;
+    }
+  }
+}
+
+.treeWrap {
+  height: 100%;
+  .searchWrap {
+    padding: 6px 28px;
+  }
+  .treeContent{
+    height: calc(100% - 40px);
+    overflow: auto;
+  }
+  :global {
+    .ant-tree li .ant-tree-node-content-wrapper .ant-tree-title:hover {
+      color: #fff;
+    }
+  }
+}

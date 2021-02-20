@@ -1,0 +1,122 @@
+@import '../../../../styles/base.less';
+
+@tabHeight: 48px;
+
+.wrap {
+  height: 100%;
+
+  .dataSty {
+    padding-top: 8px;
+    height: calc(100% - 49px);
+  }
+
+  .contentWrap {
+    //height: calc(100% - @footerHeight);
+    height: calc(100% - 35px);
+
+    :global {
+      .ant-form {
+        height: 100%;
+      }
+    }
+  }
+
+  .contentWrapModal {
+    height: calc(100% - @footerHeight);
+
+    :global {
+      .ant-form {
+        height: 100%;
+      }
+    }
+  }
+
+  .contentWrap1 {
+    height: 100%;
+
+    :global {
+      .ant-form {
+        height: 100%;
+      }
+    }
+  }
+
+  .content2 {
+    padding: 10px 0 0 0;
+    height: calc(100%);
+    overflow: auto;
+  }
+
+  .content {
+    //padding: 0px 18px 0 18px;
+    //height:  calc(100% - @footerHeight);
+    //overflow: auto;
+    height: calc(100%);
+  }
+
+  .content1 {
+    height: 99%;
+  }
+
+  :global {
+    .ant-card {
+      height: 100%;
+      width: 100%;
+    }
+
+
+    .ant-card-head {
+      padding: 0;
+      min-height: 42px;
+      border: none;
+    }
+
+    .ant-card-body {
+      height: calc(100% - @tabHeight);
+      padding: 0;
+    }
+
+    .custom-pageConfig-tabs {
+      .ant-tabs-content {
+        height: calc(100% - @mainTabContentHeight - @footerHeight - @cubeMargin);
+      }
+
+      .ant-tabs {
+        //overflow: hidden !important;
+        -ms-overflow-style: none;
+      }
+
+      .ant-tabs-bar .ant-tabs-nav-container .ant-tabs-nav-wrap {
+        .ant-tabs-tab {
+          width: 112px;
+          padding: 0 4px;
+          text-align: center;
+          text-overflow: ellipsis;
+          overflow: hidden;
+
+          &:first-child,
+          &:last-child {
+            color: inherit;
+            width: 112px;
+            padding: inherit;
+          }
+        }
+      }
+    }
+  }
+}
+
+.editorBox {
+  border: 1px solid #f5f5f5;
+  height: auto;
+
+  :global {
+    span {
+      font-size: inherit;
+    }
+  }
+}
+
+.formStyle {
+  min-height: 30%;
+}

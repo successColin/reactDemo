@@ -1,0 +1,18 @@
+@headerFormHeight: 40px;
+.wrap {
+  height: 100%;
+  // height: calc(100% - @headerFormHeight);
+  .triggerWrap {
+    cursor: pointer;
+  }
+  .arrow {
+    font-size: 12px;
+    transform: rotate(0deg);
+    transition: transform .2s;
+    display: inline-block;
+    &.close {
+      transform: rotate(180deg);
+      transition: transform .2s;
+    }
+  }
+}

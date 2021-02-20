@@ -1,0 +1,74 @@
+@import '../../../styles/base.less';
+
+@time: 10s;
+
+@keyframes circleOrder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes circleBack {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.doOrder {
+  animation: circleOrder @time linear infinite;
+}
+.doBack {
+  animation: circleBack @time linear infinite;
+}
+.wrap {
+  position: absolute;
+  width: 100%;
+  height: @headerHeight;
+  overflow: hidden;
+}
+.gear {
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  opacity: .5;
+  transform: rotate(360deg);
+  &.gear1 {
+    font-size: 54px;
+    left: -15px;
+    top: 10px;
+    color: rgba(255, 255, 255, .3);
+    &:extend(.doOrder);
+  }
+  &.gear2 {
+    font-size: 118px;
+    left: 36px;
+    top: 36px;
+    color: rgba(255, 255, 255, .18);
+    &:extend(.doBack);
+  }
+  &.gear3 {
+    font-size: 88px;
+    left: 235px;
+    top: 15px;
+    color: rgba(255, 255, 255, .3);
+    &:extend(.doOrder);
+  }
+  &.gear4 {
+    font-size: 66px;
+    left: 321px;
+    top: 10px;
+    color: rgba(255, 255, 255, .8);
+    &:extend(.doBack);
+  }
+  &.gear5 {
+    font-size: 40px;
+    left: 378px;
+    top: -19px;
+    color: rgba(255, 255, 255, .6);
+    &:extend(.doOrder);
+  }
+}

@@ -1,0 +1,214 @@
+@import '../../../../styles/base.less';
+
+@treeNodeMargin: 24px;
+@treeNodeHeight: 32px;
+
+.wrap {
+  height: 100%;
+  position: relative;
+
+  :global {
+    .ant-spin-nested-loading {
+      height: 100%;
+    }
+  }
+}
+
+.searchWrap {
+  padding: @cubeMargin;
+}
+
+.buttonRest {
+  background: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  :global {
+    .iconfont {
+      color: #999999;
+      font-size: 12px;
+    }
+
+    .iconfont:hover {
+      color: #666666;
+      font-size: 12px;
+    }
+  }
+}
+
+.inputChange {
+  width: 35px;
+
+  :global {
+    .ant-input-number-handler-wrap {
+      display: none;
+    }
+
+    .ant-input-number-input {
+      width: 100%;
+      height: 30px;
+      text-align: center;
+      padding: 0;
+    }
+  }
+}
+
+.inputWrap {
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 12px;
+  color: #999999;
+  border-radius: 20px;
+  box-shadow: 0px 0px 4px 1px #EBEBEB;
+}
+
+.left {
+  //height: calc(100% - @treeSearchHeight - @footerHeight - 42px);
+  height: calc(100% - 77px - 42px - 45px);
+  width: 100%;
+  overflow: auto;
+  font-size: @treeNodeFontSize;
+
+  :global {
+    .ant-list-item {
+      margin: 5px 10px;
+      padding: 0;
+    }
+
+    .ant-row {
+      display: flex;
+      width: 100%;
+      height: auto;
+      align-items: center;
+      padding: 14px 10px;
+      border-radius: 5px;
+
+      &:hover {
+        background: #f5f5f5;
+        cursor: pointer;
+      }
+
+      .ant-col {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+
+    .active {
+      padding: 14px 10px;
+      //border-left: 3px solid #C62127;
+      background: #f5f5f5;
+      cursor: pointer;
+    }
+
+    .iconfont {
+      margin-left: 4px;
+      font-size: 28px;
+    }
+  }
+}
+
+.leftNomal {
+  //height: calc(100% - @treeSearchHeight - @footerHeight - 42px);
+  height: calc(100% - 83px - 45px);
+  width: 100%;
+  overflow: auto;
+  font-size: @treeNodeFontSize;
+
+  :global {
+    .ant-list-item {
+      margin: 5px 10px;
+      padding: 0;
+    }
+
+    .ant-row {
+      display: flex;
+      width: 100%;
+      height: auto;
+      align-items: center;
+      padding: 5px;
+      border-radius: 5px;
+
+      &:hover {
+        background: #f5f5f5;
+        cursor: pointer;
+      }
+
+      .ant-col {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+
+    .active {
+      padding: 5px;
+      //border-left: 3px solid #C62127;
+      background: #f5f5f5;
+      cursor: pointer;
+    }
+
+    .iconfont {
+      margin-left: 4px;
+      font-size: 28px;
+    }
+  }
+}
+
+.addNew {
+  margin-top: 5px;
+}
+
+.addNewBtn {
+  width: 100%;
+  height: 32px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 4px;
+  border: 1px solid rgba(235, 235, 235, 1);
+  line-height: 32px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.addnewBtnIco {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+}
+
+.firstIcon {
+  margin: 0 4px 0 0 !important;
+  font-size: 16px !important;
+  color: #CED2D7;
+}
+.stateName{
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-right: 2px;
+  border-radius: 50%;
+}
+
+.leftList {
+  font-size: 12px;
+  color: #808080;
+
+  :global {
+    .ant-col {
+      line-height: 1.5;
+    }
+
+    .ant-col:nth-child(1) {
+      color: #111111;
+      font-size: 14px;
+    }
+  }
+}

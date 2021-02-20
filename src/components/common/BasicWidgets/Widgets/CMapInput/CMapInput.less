@@ -1,0 +1,28 @@
+.CMapInput{
+  width: 100%;
+  height: 100%;
+  .markerImg {
+    width: 20px;
+    height: 20px;
+    background: #3194FA;
+  }
+  .map {
+    height: calc(100% - 64px);
+    padding: 5px;
+    border-bottom: 1px solid #EBEBEB;
+    :global{
+      .amap-toolbar-geo {
+        display: none !important;
+      }
+    }
+  }
+  .footerVal {
+    height: 64px;
+    line-height: 64px;
+    margin-left: 20px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #111111;
+  }
+}

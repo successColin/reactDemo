@@ -1,0 +1,208 @@
+/*
+ * @Author: Fus
+ * @Date:   2019-06-17 15:51:16
+ * @Last Modified by: mikey.zhaopeng
+ * @Last Modified time: 2020-11-05 10:45:55
+ * @Desc: 英文文本地语言包
+ */
+export default {
+  /** 全局通用类 */
+  'global.tip': 'Tips',
+  'global.maturity': (time) => `system authorization will expire on ${time} day. Please contact the administrator. `,
+  'global.enter': (user) => `${user} get into the room。`,
+  'global.leave': (user) => `${user} leave the room。`,
+  'global.reject': (user) => `${user} refuse to call。`,
+  'global.response': (user) => `${user} has no response。`,
+  'global.busyline': (user) => `${user} busy line。`,
+  'global.Cancelcall': 'Cancel this call。',
+  'global.timeOut': 'Call timeout not answered。',
+  'global.clear.cache': 'Are you sure you want to clear the redis system cache?',
+  'global.clear.content': 'After clearing the redis cache, all users of the system (PC and mobile) need to log in again!',
+  'global.index': 'Serial Number',
+  'global.memo': 'Description',
+  'global.noPermisssion': 'Permission Denied',
+  'global.noViewPermission': 'No Viewing Rights',
+  'global.crumbPath': 'Position：',
+  'global.lost.id': 'Please Configure The Id Field',
+  'global.userDesigner': 'Design Team',
+  /** tab */
+  'tab.HomePage': 'HomePage',
+  'error.msg': 'Error Message',
+  'No.spaces': 'No spaces',
+  'require': 'Required',
+
+  /** 表单类 */
+  'form.placeholder.keywords': 'Enter Keyword Search',
+  'header.search.placeholder': 'Search For',
+  'triggerEvent.event.placeholder': 'Select Event',
+  'userCenter.placeholder.oldPwd': 'Please Enter The Original Password',
+  'userCenter.placeholder.newPwd': 'Please set a new password',
+  'userCenter.placeholder.checkNewPwd': 'Please enter new password again',
+  'language.placeholder.type': 'Please select fields to edit in bulk',
+
+  /** 二次确认类 */
+  'confirm.del': (name) => `Are you sure you want to delete ${name}？`,
+  'confirm.del.default': 'You sure you want to delete it？',
+  'confirm.del.Release': 'Are you sure you want to disassociate？',
+  'confirm.ok': 'OK',
+  'confirm.rest.password': 'Are you sure you want to reset your password？',
+  'confirm.unlock.password': 'Are you sure to unlock the user\'s password？',
+  'confirm.cancel': 'Cancel',
+  'confirm.saveFrame.title': 'The current interface is not saved',
+  'confirm.saveFrame.content': 'Need to save element information before configuring trigger',
+  'confirm.replace.bundle': name => `Are you sure you want to replace (${name})？`,
+  'confirm.resetDefault': 'Are you sure you want to restore the default？',
+  'confirm.choose.delete': 'Please select data deletion',
+
+  /** message类 */
+  'message.warn.nopromiss': 'No permission to transfer to this page!',
+  'message.warn.nopromiss.refresh': 'Currently, it is not supported to refresh the whole frame and then jump to other pages!',
+  'message.warn.saveFrameing': 'Save frame info...',
+  'message.del.success': 'Successfully Deleted',
+  'message.save.generate': 'Generate Successfully',
+  'message.save.success': 'Saved Successfully',
+  'message.check.success': 'Successful Operation',
+  'message.replace.success': 'Replace Successfully',
+  'message.move.success': 'Transfer Successful',
+  'message.copy.success': 'Copy Successful',
+  'message.copy.error': 'Copy Successful',
+  'message.error.hasChild': 'This node has children and cannot be deleted',
+  'message.noUserDesigner': 'Please choose to apply to the design group first',
+  'message.warn.noFrameData': 'Please save the frame information first',
+  'message.please.choose': 'Please select data',
+  'message.pease.choose.one': 'Please select a piece of data to edit',
+  'message.pease.choose.more': 'Please select 1 or more data！',
+  'message.error.onlyOne': 'Only select one piece of data',
+  'message.not.defaults': 'Not allowed to delete default fields',
+  'message.error.noBundle': 'The bundle is not saved',
+  'message.error.noFunctionalType': 'Please select the ribbon first',
+  'message.error.excle': 'Please upload .xls file',
+  'message.error.noFrame': 'This bundle does not save frame information',
+  'message.error.hasUserDesigner': 'The design group already exists',
+  'message.error.left.noId': 'Please complete the ID configuration in the left list panel',
+  'message.error.noPageConfig': 'This page is not fully configured',
+  'message.error.noSelected': 'Please select data first',
+  'messge.error.keycodeRepeat': name => `${name || 'Keycode'} is not unique`,
+  'message.error.noFlowApprove': 'Process server is not deployed',
+  'message.error.noId': 'The list is not configured with an id and cannot be deleted',
+  'message.error.noTargetFunction': 'Unselected target menu',
+  'message.error.noTargetUserDesigner': 'Unselected target user design group',
+  'message.error.noData': 'No data selected',
+  'message.error.startTimeAfterEndTime': 'Start time cannot be greater than end time',
+  'message.success.copy': 'Copy successful',
+  'message.success.reset': 'Successful recovery',
+  'message.error.msg': 'Please select the corresponding control or field to be associated',
+  'message.err.templateId': 'Please select the corresponding word template',
+  'message.err.exit.function': 'The same menu already exists. Please choose another menu',
+  'message.err.please.configure.showname': 'please configure the main display name of the process',
+  'message.sure.update': 'Are you sure you want to update?',
+  'message.file.isExist': 'File already exist',
+  'message.menu.collect': 'Collect up to 10 menus',
+
+
+  // 文件上传类
+  'file.overSize': max => `Documents cannot exceed ${max}M`,
+  'file.unAcceptType': 'File type is not supported',
+  'file.error': 'File upload exception',
+  'file.success': 'File uploaded successfully',
+  'file.download': 'Download',
+  'messge.error.keycode': name => `${name} already exists`,
+  'file.createFile': 'New Folder',
+  'file.editFile': 'Edit Folder',
+  'file.is.exist': 'The folder already exists!',
+  /** 表格类 */
+  'table.total': total => `Total ${total} data`,
+  'relateTable.col.name': 'Entity table name',
+  'tableColumn.col.name': 'Field name',
+  'reload.real': 'Please log in again after modifying permissions',
+  'content.length': 'Content length 200 bits',
+  /** 图片alt */
+  'frameType.img.alt': 'Frame type',
+
+  // 触发器事件类型
+  'triggerEvent.placeholder': 'Select event',
+  'triggerEvent.event.click': 'Click on',
+  'triggerEvent.event.dataChange': 'Data change',
+  'triggerEvent.event.assignValue': 'Assignment',
+  'triggerEvent.event.onLoad': 'Load',
+  'triggerEvent.event.props': 'Calculated attributes',
+
+  // 授权
+  'license.download': 'View authorization file',
+
+  // 表单自定义校验
+  'validator.time.startTime': startTime => `No earlier than${startTime}`,
+  'validator.time.endTime': endTime => `No later than${endTime}`,
+  'validator.time.outTime': (startTime, endTime) => `Not in range：${startTime} to ${endTime}`,
+  'validator.textEditor.noData': 'Please enter content',
+  'validator.upload.noData': 'Please upload the picture',
+
+  // 富文本功能
+  'textEditor.img': 'Insert picture',
+
+  // 附加
+  'java.else.choose': 'Please select an entity and add a new table field',
+  'java.else.chooseone': 'Please select the table field and edit',
+  'java.else.initData': 'Editing of default fields is not allowed',
+  'javaBean.form.require': 'Consisting of less than 50 alphanumeric characters',
+  'javaBean.form.isNumber': 'Content as numbers',
+  'saving.business': 'Adding and saving business association file forms is not supported at this time',
+
+  // app配置
+  'appHomeConfig.changeGroup': 'Switch Group',
+  'appHomeConfig.changeGroup.title': name => `Are you sure you want to transfer to the 【${name}】 group?`,
+  'appHomeConfig.bundle.details': 'Please Select The Corresponding Bundle For Design',
+
+  // 日期
+  'week.Monday': 'Monday',
+  'week.Tuesday': 'Tuesday',
+  'week.Wednesday': 'Wednesday',
+  'week.Thursday': 'Thursday',
+  'week.Friday': 'Friday',
+  'week.Saturday': 'Saturday',
+  'week.Sunday': 'Sunday',
+
+  // 图形导航
+  'visual.data.error': 'Data error, please delete the block to redraw!',
+  'visual.entity.table': 'Please select the entity table first',
+  'visual.user.group': 'The selected layer group is not associated with a design user group',
+  'visual.save': 'Please save the block configuration before creating a new subgraph',
+  'visual.save.layer': 'Please save the current layer',
+  'visual.hot.color': 'Hot color',
+  'visual.hot.flashes.color': 'Hot zone flashes color',
+  'visual.related.entities': 'Related entities',
+  'visual.select.associated': 'Select the associated entity',
+  'visual.relational.record': 'The relational record',
+  'visual.select.record': 'Please select the associated record',
+  'visual.associated.panel': 'Associated panel',
+  'visual.select.association.panel': 'Select the Association panel',
+  'visual.select.entity': 'Select the entity',
+  'visual.modal.select.record': 'Select records',
+  'visual.moadl.associated.panel': 'Associated panel',
+  'visual.confirm.deletion': 'Do you confirm deletion?',
+  'visual.select.group': 'Please select layer group before operation',
+  'visual.zoom.config': 'Please set the layer before saving',
+  'visual.save.current.layer': 'Please save the current layer',
+  'visual.save.img.layer': 'Please select the base map！',
+  'visual.select.layer': 'Please select layers',
+  'visual.full.screen': 'Full screen',
+  'visula.upload.background': 'Upload the background',
+  'visual.rectangular': 'Rectangular',
+  'visual.circle': 'Circle',
+  'visual.ellipse': 'Rllipse',
+  'visual.triangle': 'Triangle',
+  'visual.add.hot': 'Add hot',
+  'visual.layer.delete': 'Layer delete',
+  'visual.control.save': 'Save',
+  'visual.control.mobile': 'Move',
+  'visual.control.upload': 'Upload the image',
+  'visual.control.layer.group': 'Select layer group',
+  'visual.control.upload.pictures': 'Upload pictures of hot spots',
+  'visual.save.success': 'Save success',
+  'visual.select.hot.delete': 'Please select a hot zone that you want to remove',
+  'visual.layer.configured.yet': 'This layer is not configured yet',
+  'visual.layer.setting': 'layer setting',
+
+  // 会议管理
+  'video.select.export': 'Please select experts to invite',
+};

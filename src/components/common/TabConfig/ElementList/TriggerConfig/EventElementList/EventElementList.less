@@ -1,0 +1,64 @@
+.wrap {
+  height: 100%;
+  .select {
+    margin: 10px;
+    width: 140px;
+    height: 32px;
+    position: absolute;
+    z-index: 1;
+    :global {
+      .ant-select{
+        width: 100%;
+      }
+    }
+  }
+  .tabs {
+    .tabTit {
+      padding: 8px 8px 8px 12px;
+      .name {
+        float: left;
+        max-width: 60%;
+        overflow: hidden;
+      }
+      .iconBox {
+        float: right;
+      }
+      &:after {
+        clear: both;
+        display: block;
+        content: "";
+      }
+    }
+    :global {
+      .ant-tabs-tab {
+        padding: 0!important;
+      }
+      .ant-tabs-nav-container {
+        padding: 0!important;
+        .ant-tabs-nav-wrap {
+          overflow: auto;
+        }
+        .ant-tabs-tab-prev,
+        .ant-tabs-tab-next {
+          display: none;
+        }
+      }
+      .ant-tabs-tabpane.ant-tabs-tabpane-active {
+        overflow: auto;
+      }
+    }
+  }
+}
+.addModal {
+  :global {
+    .ant-modal-header {
+      background: #fff;
+    }
+    .ant-modal-body {
+      // padding: 12px;
+    }
+  }
+}
+:global {
+
+}

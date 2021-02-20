@@ -1,0 +1,91 @@
+@import '../../../styles/base.less';
+
+@footerHeight: 42px;
+
+.wrap {
+  height: 100%;
+  position: relative;
+
+  :global {
+    .ant-form-item {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    .ant-form-item-label {
+      justify-content: flex-start;
+      padding: 0;
+      height: 26px;
+    }
+  }
+}
+
+.formWrap {
+  overflow: auto;
+  height: calc(100% - 51px);
+  overflow: auto;
+}
+
+.content {
+  height: calc(100% - @footerHeight);
+  padding: 0 20px;
+
+  .tit {
+    line-height: 50px;
+    font-size: 16px;
+    color: #111;
+    border-bottom: @borderStyle;
+
+    .configBtn {
+      float: right;
+      margin-top: 10px;
+
+      :global {
+        .icon-setting {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  border-top: @borderStyle;
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: @footerHeight;
+  padding-right: 20px;
+}
+
+.colorPickerWrap {
+  text-align: right;
+
+  :global {
+    .ant-btn {
+      line-height: 24px;
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.modal {
+  :global {
+    .ant-modal-header {
+      border-bottom: none;
+    }
+
+    .ant-modal-body {
+      padding: 0 14px;
+    }
+  }
+}
+
+.csearchWrap {
+  position: absolute;
+  right: 47px;
+  top: 7px;
+  width: 200px;
+}

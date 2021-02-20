@@ -1,0 +1,65 @@
+@import '../../../styles/base.less';
+
+.wrap {
+  width: 336px;
+  height: 370px;
+  font-size: 12px;
+
+  .title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111111;
+    padding-left: 18px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+    border-bottom: @borderStyle;
+  }
+}
+
+.list {
+  padding: 0 18px;
+  height: calc(100% - 42px);
+  overflow: auto;
+
+  li {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    border-bottom: @borderStyle;
+
+    .iconWrap {
+      font-size: 24px;
+    }
+
+    .titWrap {
+      display: inline-block;
+      margin-left: 10px;
+      width: calc(100% - 10px - 45px);
+
+      p {
+        line-height: 1;
+        //overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .fileName {
+        color: #111111;
+      }
+
+      .size {
+        color: #9B9B9B;
+      }
+    }
+
+    .down {
+      margin-left: auto;
+      line-height: 56px;
+      color: #9B9B9B;
+
+      &:hover {
+        color: #1890ff;
+      }
+    }
+  }
+}

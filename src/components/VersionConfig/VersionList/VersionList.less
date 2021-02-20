@@ -1,0 +1,23 @@
+.wrap {
+  height: 100%;
+}
+.btnWrap {
+  padding: 8px 0;
+  min-height:48px;
+  :global {
+    .ant-btn {
+      margin-right: 8px;
+      .iconfont {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+.table {
+  height: calc(100% - 48px - 42px);
+  :global {
+    .ant-table-pagination.ant-pagination {
+      margin: 8px 0;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import '../../../../../../../styles/base.less';
+
+.wrap {
+  .headerWrap {
+    padding: 0 16px;
+  }
+  .detailWrap {
+    padding: 0 16px;
+    border-top: @borderStyle;
+  }
+  :global {
+    .ant-form-item {
+      display: flex;
+    }
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+    .ant-form-item-label {
+      width: 70px;
+      line-height: 40px;
+      height: 40px;
+    }
+    .ant-form-item-control-wrapper {
+      flex: 1;
+      margin-left: auto;
+      .ant-form-item-children > * {
+        width: 100%;
+      }
+
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import '../../styles/base.less';
+@moduleWidth: 460px;
+@detailWidth: 300px;
+
+.wrap {
+  height: 100%;
+  padding: 0 16px;
+  .borderWrap {
+    border: @borderStyle;
+    height: 100%;
+  }
+  .moduleWrap,
+  .showWrap,
+  .detailWrap {
+    float: left;
+    height: 100%;
+  }
+  :global {
+    .ant-form {
+      height: 100%;
+    }
+  }
+}
+.moduleWrap {
+  width: @moduleWidth;
+}
+.showWrap {
+  width: calc(100% - @moduleWidth - @detailWidth);
+  background: #FAFAFA;
+  padding: 20px;
+  overflow: auto;
+  border-left: @borderStyle;
+  border-right: @borderStyle;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+.detailWrap {
+  width: @detailWidth;
+}

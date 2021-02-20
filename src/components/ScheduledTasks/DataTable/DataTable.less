@@ -1,0 +1,83 @@
+
+.wrap {
+  width: 100%;
+  height: 100%;
+
+  .wrapContent {
+    width: 98%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    border-left: 1px solid rgba(235, 235, 235, 1);
+    border-right: 1px solid rgba(235, 235, 235, 1);
+
+    .dataList {
+      width: 180px;
+      height: 100%;
+      overflow: hidden;
+      border-right: 1px solid rgba(235, 235, 235, 1);
+
+      .btnNew {
+        width: 90%;
+        height: 32px;
+        margin: 5px auto;
+        border-radius: 3px;
+        line-height: 32px;
+        text-align: center;
+        border: 1px solid rgba(235, 235, 235, 1);
+        cursor: pointer;
+
+        .addnewBtnIco {
+          margin-right: 4px;
+        }
+      }
+
+      .trggerListBox {
+        width: 100%;
+        height: calc(100% - 42px);
+        overflow-y: scroll;
+
+        .listContent {
+          display: flex;
+          margin: 2px 0;
+          height: 40px;
+          line-height: 40px;
+
+          .leftList {
+            flex: 1;
+            width: 141px;
+            margin-left: 10px;
+            overflow: hidden;
+            cursor: pointer;
+          }
+
+          .leftRight {
+            width: 18px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .dataContent {
+      flex: 1;
+      height: 100%;
+      padding-top: 9px;
+    }
+  }
+
+  .hr {
+    width: 100%;
+    margin-bottom: 10px;
+    border-top: 1px solid rgba(235, 235, 235, 1)
+  }
+
+  .bg {
+    background: rgba(245, 245, 245, 1);
+  }
+
+  .lineHeight {
+    line-height: 40px;
+  }
+}
+

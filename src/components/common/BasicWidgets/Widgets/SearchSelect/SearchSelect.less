@@ -1,0 +1,132 @@
+.search {
+  cursor: initial;
+  background: #fff;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.readOnly {
+    background: #f9f9f9;
+
+    &:hover {
+      :global {
+        .anticon {
+          cursor: initial;
+        }
+      }
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    background: #f5f5f5;
+
+    :global {
+      input,
+      .ant-input-suffix {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  :global {
+    .ant-input[disabled] {
+      background: inherit;
+      cursor: initial;
+      color: rgba(0, 0, 0, .65);
+      height: 31px;
+      line-height: 22px;
+    }
+
+    .ant-input-suffix {
+      right: 0;
+
+      > .anticon {
+        padding: 12px;
+        right: 0;
+      }
+    }
+
+    .ant-input-prefix {
+      left: 8px;
+      > .iconfont {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+// 弹框
+.modal {
+  .split {
+    position: absolute;
+    right: 45px;
+    top: -1px;
+    color: rgba(0, 0, 0, 0.45);
+  }
+
+  .modalSearch {
+    position: absolute;
+    right: 47px;
+    top: 7px;
+    width: 38px;
+
+    &:not(.showInput) {
+      :global {
+        input {
+          border: none;
+        }
+      }
+    }
+
+    &.showInput {
+      :global {
+        input {
+          width: 200px;
+          position: absolute;
+          right: 0;
+
+          + .ant-input-suffix {
+            top: 16px;
+          }
+        }
+
+        .anticon.anticon-close-circle {
+          top: 0px;
+          position: absolute;
+          right: 16px;
+        }
+      }
+    }
+
+    :global {
+      .ant-input-suffix {
+        top: 16px;
+      }
+
+      input {
+        width: 38px;
+        position: absolute;
+        right: 0;
+        transition: width .2s;
+
+        &:focus {
+          width: 200px;
+          position: absolute;
+          right: 0;
+
+          + .ant-input-suffix {
+            top: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  :global {
+    .ant-modal-title {
+      position: relative;
+    }
+  }
+}

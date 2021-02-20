@@ -1,0 +1,73 @@
+@header_left_width: 360px;
+.outlookState_con {
+  width: 100%;
+  display: flex;
+  .left {
+    border-right: 1px solid #EBEBEB;
+    width: @header_left_width;
+    justify-content: space-between;
+    .time {
+      flex-direction: column;
+      padding-left: 20px;
+      span:first-child {
+        font-size: 14px;
+        color:#111111;
+        margin-top: 5px;
+      }
+      span:last-child {
+        color: #808080;
+        font-size: 12px;
+      }
+    }
+    .create {
+      align-items: center;
+      .configBtn {
+        width: 100%;
+        text-align: center;
+        :global {
+          .custom-color {
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+  }
+  .right {
+    width: calc(100% - @header_left_width);
+    justify-content: space-between;
+    .btnCon {
+      .btnDefault {
+        margin: 12px 0px;
+        min-width: inherit;
+        color: #111111;
+        span {
+          padding-left: 4px;
+        }
+        :global {
+          .ant-btn {
+            margin-right: 8px;
+          }
+        }
+      }
+      .ellipsis {
+        min-width: 10px !important;
+        width: 0;
+      }
+      .btnInput {
+        height: 32px;
+        margin: 12px 12px 12px 0px;
+      }
+    }
+    div {
+      padding: 0 !important;
+    }
+  }
+  div {
+    display: flex;
+  }
+  .overlayItem {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

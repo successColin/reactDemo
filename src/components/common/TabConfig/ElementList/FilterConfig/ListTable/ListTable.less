@@ -1,0 +1,25 @@
+@import '../../../../../../styles/base.less';
+
+.wrap {
+  padding: 0 16px;
+  height: 100%;
+  .addBtn {
+    margin: 8px 0;
+    :global {
+      .iconfont {
+        margin-right: 4px;
+      }
+    }
+  }
+  .table {
+    height: calc(100% - 46px);
+    border: @borderStyle;
+    .operator {
+      :global {
+        span.iconfont {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.progress {
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+  border: 1px solid #EBEBEB;;
+  border-radius: 3px;
+  margin: 12px 0 12px 12px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #808080;
+  user-select:none;
+  div{
+    display: inline-block;
+    line-height: 30px;
+  }
+  .name {
+    width: 48px;
+    display: inline-block;
+    text-align: center;
+    border-right: 1px solid #EBEBEB;
+    color: #808080;
+  }
+  .minus, .add {
+    font-size: 24px;
+    cursor: pointer;
+    width: 30px;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+  }
+  .minus {
+    position: relative;
+    left: -5px;
+  }
+  .content {
+    width: 70px;
+    height: 4px;
+    background: #D8D8D8;
+    align-items: center;
+    span {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: #FFFFFF;
+      border-radius: 50%;
+      position: relative;
+      top: -1px;
+      left: -8px;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.24);
+    }
+  }
+}
+.noDrop {
+  cursor: no-drop !important; 
+}

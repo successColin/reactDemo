@@ -1,0 +1,195 @@
+@import '../../styles/base.less';
+
+@cubeMargin: 10px;
+@titleHeight: 40px;
+.wrap {
+  height: 100%;
+  min-height: 450px;
+  padding: 0 @cubeMargin @cubeMargin;
+  .item {
+    padding-top: @cubeMargin;
+    height: 100%;
+    // height: calc(100% - @cubeMargin);
+    // padding: 0 @cubeMargin @cubeMargin;
+    :global {
+      .ant-row,
+      .ant-col {
+        height: 100%;
+      }
+      .ant-col {
+        &:not(:first-child) {
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+  .block {
+    height: 100%;
+    padding: 0 10px 10px;
+    background: #fff;
+    box-shadow: @boxShadow;
+    &.perBlock {
+      .tit {
+        position: static;
+      }
+      .content {
+        height: calc(100% - @titleHeight);
+      }
+    }
+  }
+  .tit {
+    line-height: @titleHeight;
+    font-size: 12px;
+    color: #111;
+    font-weight: bold;
+    position: absolute;
+  }
+  .content {
+    width: 100%;
+    height: 100%;
+    // height: calc(100% - @titleHeight);
+    // border: 1px solid #111;
+  }
+  .top {
+    height: 16%;
+    width: 100%;
+    .item {
+      // background: #ddd;
+      padding: 0;
+      padding-top: @cubeMargin - 4px;
+    }
+    .iconWrap {
+      margin-right: 20px;
+      border-radius: 50%;
+      height: 48px;
+      width: 48px;
+      line-height: 48px;
+      text-align: center;
+      background: red;
+      position: relative;
+      z-index: 0;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: #fff;
+        left: 6px;
+        top: 6px;
+        z-index: 1;
+      }
+    }
+    .icon-1 {
+      .count,
+      .iconWrap {
+        color: #DC4247;
+      }
+      .iconWrap {
+        background:rgba(220,66,71,.5);
+      }
+    }
+    .icon-2 {
+      .count,
+      .iconWrap {
+        color: #52C41A;
+      }
+      .iconWrap {
+        background:rgba(82,196,26,.5);
+      }
+    }
+    .icon-3 {
+      .count,
+      .iconWrap {
+        color: #FAB71C;
+      }
+      .iconWrap {
+        background:rgba(250,183,28,.5);
+      }
+    }
+    .icon-4 {
+      .count,
+      .iconWrap {
+        color: #FA541C;
+      }
+      .iconWrap {
+        background:rgba(250,84,28,.5);
+      }
+    }
+    :global {
+      .iconfont {
+        font-size: @titleHeight;
+        position: relative;
+        z-index: 2;
+      }
+    }
+    .box {
+      background: #fff;
+      font-size: 12px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding-left: 28px;
+      color: #111;
+      .count {
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+    .countWrap {
+      height: 100%;
+      box-shadow: @boxShadow;
+    }
+  }
+  .middle,
+  .footer {
+    height: 42%;
+    width: 100%;
+  }
+  .middle {
+    .item {
+      // background: #ddd;
+    }
+  }
+  .footer {
+    .item {
+      // background: #ddd;
+    }
+  }
+}
+.perLine {
+  padding-left: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  .progressBox {
+    position: relative;
+    .text {
+      position: absolute;
+      right: 0;
+      top: 1px;
+      font-size: 12px;
+      color: #808080;
+    }
+  }
+  :global {
+    .ant-progress {
+      margin-bottom: 8px;
+    }
+    .ant-progress-outer {
+      padding: 12px 0 0;
+    }
+    .ant-progress-inner {
+      background: #E3E7E7;
+    }
+    .ant-progress-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
+      font-size: 18px;
+      color: #111;
+    }
+  }
+}
